@@ -1,0 +1,28 @@
+/*Designing for Mobile-first; dark theme first*/
+
+body{
+    /*placeholder bg color*/
+    background-color: darkgray;
+}
+
+/* Smallest phones if we want to account for those */
+ @media screen and (max-width: 600px) {
+    /*Smallest phones*/
+ }
+
+/* tablets */
+ @media screen and (min-width: 768px) {
+
+ }
+ 
+ /* pc */
+ @media screen and (min-width: 992px) {
+
+ }
+ 
+@media (prefers-color-scheme: light){
+    body{
+        /*placeholder bg color*/
+        background-color: white;
+    }
+}
