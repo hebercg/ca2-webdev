@@ -32,6 +32,16 @@ body {
     color: #3f0e03; /* Dark brown text */
   }
 }
+/* Button style placeholder*/
+.btn.btn-primary {
+  background-color: #a75c30; /* Light brown background based on Ana's idea */
+  border-color: #a75c30; /* white text? I am not sure */
+  color: #ffffffff;
+}
+.btn.btn-primary:hover:hover {
+  background-color: #8c3815;
+  border-color: #8c3815;
+}
 /* Dark mode */
 body.dark-mode {
   background-color: #3d180a; /* Dark brown background */
