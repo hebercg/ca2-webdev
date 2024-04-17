@@ -1,22 +1,16 @@
 /*Designing for Mobile-first; dark theme first*/
 
-/*light mode stuff*/
-@media (prefers-color-scheme: light) {
-  body {
-    /*placeholder bg color*/
-    background-color: darkgray;
-    color: #d7c7a3;
-    background-image: linear-gradient(
-        rgba(231, 228, 215, 0.5),
-        rgba(231, 228, 215, 0.5)
-      ),
-      url(/images/backgroundimage.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 100vh;
-    margin: 0;
-  }
+body {
+  background-image: linear-gradient(
+      rgba(231, 228, 215, 0.5),
+      rgba(231, 228, 215, 0.5)
+    ),
+    url(/images/backgroundimage.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  margin: 0;
 }
 /*dark mode stuff*/
 @media (prefers-color-scheme: dark) {
@@ -29,6 +23,30 @@
       ),
       url(/images/backgroundimage.jpg);
   }
+}
+/*light mode stuff*/
+@media (prefers-color-scheme: light) {
+  body {
+    color: #d7c7a3;
+    background-image: linear-gradient(
+        rgba(75, 74, 70, 0.653),
+        rgba(231, 228, 215, 0.5)
+      ),
+      url(/images/backgroundimage.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    margin: 0;
+  }
+}
+/* Hover effect */
+.light-mode-text:hover {
+  color: #8c3815; /* Dark brown hover for the light mode */
+}
+
+.dark-mode-text:hover {
+  color: #a75c30; /* Lighter brown hover for the dark mode */
 }
 /* Smallest phones if we want to account for those */
 @media screen and (max-width: 600px) {
@@ -48,12 +66,4 @@
     background-color: white; /* Placeholder background color */
     color: #3f0e03; /* Dark brown text */
   }
-}
-/* Hover effect */
-.light-mode-text:hover {
-  color: #8c3815; /* Dark brown hover for the light mode */
-}
-
-.dark-mode-text:hover {
-  color: #a75c30; /* Lighter brown hover for the dark mode */
 }
