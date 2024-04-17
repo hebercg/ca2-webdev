@@ -43,7 +43,7 @@
     <nav></nav>
     <main>
       <p>Hello, <span id="name"></span>! Browse our amazing products.</p>
-      <table id="data-table">
+      <table id="product-table">
         <thead>
           <tr>
             <th>Name</th>
@@ -58,32 +58,31 @@
 
         </tbody>
       </table>
-
-      <script>
-        $(document).ready(function() {
-          // Retrieve JSON data from "jsonexdata.json" file
-          $.getJSON("products.json", function(data) {
-            var tableBody = $("#data-table tbody");
-      
-            // Iterate over each person object in the JSON data
-            $.each(data, function(index, person) {
-              var row = $("<tr></tr>"); // Create a new table row
-      
-              // Create table cells and fill them with the person's data
-              row.append($("<td></td>").text(person.productName));
-              row.append($("<td></td>").text(person.origin));
-              row.append($("<td></td>").text(person.price));
-              row.append($("<td></td>").append(person.imageLink));
-              row.append($("<td></td>").text(person.properties));
-              row.append($("<td></td>").text(person.description));
-      
-              tableBody.append(row); // Add the row to the table body
-            });
-          });
-        });
-      </script>
-
     </main>
     <footer></footer>
+
+    <script>
+      $(document).ready(function() {
+        $.getJSON("products.json", function(data) {
+          var tableBody = $("#product-table tbody");
+    
+          // Iterate over each person object in the JSON data
+          $.each(data, function(index, value) {
+            var row = $("<tr></tr>"); // Create a new table row
+    
+            // Create table cells and fill them with the person's data
+            row.append($("<td></td>").append(value.productName));
+            row.append($("<td></td>").append(value.origin));
+            row.append($("<td></td>").append(value.price));
+            row.append($("<td></td>").append(value.imageLink));
+            row.append($("<td></td>").append(value.properties));
+            row.append($("<td></td>").append(value.description));
+    
+            tableBody.append(row); // Add the row to the table body
+          });
+        });
+      });
+    </script>
+
   </body>
 </html>
