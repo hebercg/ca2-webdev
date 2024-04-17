@@ -1,18 +1,35 @@
 /*Designing for Mobile-first; dark theme first*/
 
-body {
-  /*placeholder bg color*/
-  background-color: darkgray;
-  color: #d7c7a3;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url(/images/backgroundimage.jpg);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 100vh;
-  margin: 0;
+/*light mode stuff*/
+@media (prefers-color-scheme: light) {
+  body {
+    /*placeholder bg color*/
+    background-color: darkgray;
+    color: #d7c7a3;
+    background-image: linear-gradient(
+        rgba(231, 228, 215, 0.5),
+        rgba(231, 228, 215, 0.5)
+      ),
+      url(/images/backgroundimage.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    margin: 0;
+  }
 }
-
+/*dark mode stuff*/
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #3d180a; /* Dark brown background */
+    color: #e7e4d7; /* Light brown text */
+    background-image: linear-gradient(
+        rgba(61, 24, 10, 0.5),
+        rgba(61, 24, 10, 0.5)
+      ),
+      url(/images/backgroundimage.jpg);
+  }
+}
 /* Smallest phones if we want to account for those */
 @media screen and (max-width: 600px) {
   /*Smallest phones*/
@@ -32,22 +49,6 @@ body {
     color: #3f0e03; /* Dark brown text */
   }
 }
-/* Button style placeholder*/
-.btn.btn-primary {
-  background-color: #a75c30; /* Light brown background based on Ana's idea */
-  border-color: #a75c30; /* white text? I am not sure */
-  color: #ffffffff;
-}
-.btn.btn-primary:hover:hover {
-  background-color: #8c3815;
-  border-color: #8c3815;
-}
-/* Dark mode */
-body.dark-mode {
-  background-color: #3d180a; /* Dark brown background */
-  color: #e7e4d7; /* Light brown text */
-}
-
 /* Hover effect */
 .light-mode-text:hover {
   color: #8c3815; /* Dark brown hover for the light mode */
