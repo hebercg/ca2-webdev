@@ -1,11 +1,11 @@
 /*Designing for Mobile-first; dark theme first*/
 
-body {
+main {
   background-image: linear-gradient(
       rgba(231, 228, 215, 0.5),
       rgba(231, 228, 215, 0.5)
     ),
-    url(/images/backgroundimage.jpg);
+    url(../images/backgroundimage.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -14,25 +14,25 @@ body {
 }
 /*dark mode stuff*/
 @media (prefers-color-scheme: dark) {
-  body {
+  main {
     background-color: #3d180a; /* Dark brown background */
     color: #e7e4d7; /* Light brown text */
     background-image: linear-gradient(
         rgba(61, 24, 10, 0.5),
         rgba(61, 24, 10, 0.5)
       ),
-      url(/images/backgroundimage.jpg);
+      url(../images/backgroundimage.jpg);
   }
 }
 /*light mode stuff*/
 @media (prefers-color-scheme: light) {
-  body {
+  main {
     color: #d7c7a3;
     background-image: linear-gradient(
         rgba(75, 74, 70, 0.653),
         rgba(231, 228, 215, 0.5)
       ),
-      url(/images/backgroundimage.jpg);
+      url(../images/backgroundimage.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

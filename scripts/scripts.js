@@ -2,3 +2,8 @@
 function toggleDarkMode() {
   document.body.classList.toggle("dark-mode");
 }
+
+function addname(){
+  var name = prompt("Please enter your name");
+  document.getElementById("name").innerHTML = name;
+}
