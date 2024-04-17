@@ -3,6 +3,14 @@
 body {
   /*placeholder bg color*/
   background-color: darkgray;
+  color: #d7c7a3;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(/images/backgroundimage.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  margin: 0;
 }
 
 /* Smallest phones if we want to account for those */
