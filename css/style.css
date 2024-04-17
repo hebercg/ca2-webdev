@@ -1,28 +1,40 @@
 /*Designing for Mobile-first; dark theme first*/
 
-body{
-    /*placeholder bg color*/
-    background-color: darkgray;
+body {
+  /*placeholder bg color*/
+  background-color: darkgray;
 }
 
 /* Smallest phones if we want to account for those */
- @media screen and (max-width: 600px) {
-    /*Smallest phones*/
- }
+@media screen and (max-width: 600px) {
+  /*Smallest phones*/
+}
 
 /* tablets */
- @media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) {
+}
 
- }
- 
- /* pc */
- @media screen and (min-width: 992px) {
+/* pc */
+@media screen and (min-width: 992px) {
+}
 
- }
- 
-@media (prefers-color-scheme: light){
-    body{
-        /*placeholder bg color*/
-        background-color: white;
-    }
+@media (prefers-color-scheme: light) {
+  body {
+    background-color: white; /* Placeholder background color */
+    color: #3f0e03; /* Dark brown text */
+  }
+}
+/* Dark mode */
+body.dark-mode {
+  background-color: #3d180a; /* Dark brown background */
+  color: #e7e4d7; /* Light brown text */
+}
+
+/* Hover effect */
+.light-mode-text:hover {
+  color: #8c3815; /* Dark brown hover for the light mode */
+}
+
+.dark-mode-text:hover {
+  color: #a75c30; /* Lighter brown hover for the dark mode */
 }
