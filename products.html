@@ -31,11 +31,59 @@
 
     <!-- when referring to scripts use -->
     <script src="scripts/scripts.js"></script>
+
+    <!-- JQuery -->
+    <script
+			  src="https://code.jquery.com/jquery-3.7.1.js"
+			  integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+			  crossorigin="anonymous"></script>
   </head>
-  <body onload="addname()">
+  <body">
     <header></header>
     <nav></nav>
-    <main><p>Hello, <span id="name"></span>! Browse our amazing products.</p></main>
+    <main>
+      <p>Hello, <span id="name"></span>! Browse our amazing products.</p>
+      <table id="data-table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Origin</th>
+            <th>Price</th>
+            <th>Image</th>
+            <th>Properties</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+      </table>
+
+      <script>
+        $(document).ready(function() {
+          // Retrieve JSON data from "jsonexdata.json" file
+          $.getJSON("products.json", function(data) {
+            var tableBody = $("#data-table tbody");
+      
+            // Iterate over each person object in the JSON data
+            $.each(data, function(index, person) {
+              var row = $("<tr></tr>"); // Create a new table row
+      
+              // Create table cells and fill them with the person's data
+              row.append($("<td></td>").text(person.productName));
+              row.append($("<td></td>").text(person.origin));
+              row.append($("<td></td>").text(person.price));
+              row.append($("<td></td>").append(person.imageLink));
+              row.append($("<td></td>").text(person.properties));
+              row.append($("<td></td>").text(person.description));
+      
+              tableBody.append(row); // Add the row to the table body
+            });
+          });
+        });
+      </script>
+
+    </main>
     <footer></footer>
   </body>
 </html>

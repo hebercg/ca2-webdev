@@ -1,0 +1,15 @@
+[
+    {
+        "productID": 1,
+        "productName": "Arabica",
+        "origin": "Brazil",
+        "price": 8.99,
+        "imageLink": "<img src='/images/coffeebeans1.jpg'/>",
+        "properties": [
+            "rich",
+            "nutty",
+            "aromatic"
+        ],
+        "description": "Our unique blend of some coffee beans, farm-to-table hand-roasted to perfection"
+    }
+]
