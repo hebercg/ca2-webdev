@@ -1,9 +1,9 @@
-/* JS function to trigger to toggle an event, in this case a buttonr*/
+/* JS function to trigger to toggle an event, in this case a button if we wanted to*/
 function toggleDarkMode() {
   document.body.classList.toggle("dark-mode");
 }
 
-function addname(){
+function addname() {
   var name = prompt("Please enter your name");
   document.getElementById("name").innerHTML = name;
 }

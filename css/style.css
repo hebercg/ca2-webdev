@@ -67,3 +67,25 @@ main {
     color: #3f0e03; /* Dark brown text */
   }
 }
+/* navbar styling stuff - background and links - lets change the colours too */
+.navbar {
+  background-color: #885436;
+}
+
+.navbar .navbar-brand,
+.navbar .nav-link {
+  color: #e7e4d7;
+}
+
+.navbar .nav-link.active {
+  color: #ffffff;
+  background-color: #8c3815;
+}
+
+.navbar-toggler {
+  border-color: #e7e4d7;
+}
+
+.navbar-toggler-icon {
+  background-color: #e7e4d7;
+}
