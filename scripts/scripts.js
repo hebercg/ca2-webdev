@@ -7,3 +7,7 @@ function addname() {
   var name = prompt("Please enter your name");
   document.getElementById("name").innerHTML = name;
 }
+
+function formValidate(){
+  alert("This function works");
+}
