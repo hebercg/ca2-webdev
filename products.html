@@ -38,13 +38,15 @@
 			  integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
 			  crossorigin="anonymous"></script>
   </head>
-  <body">
+  <body onload="hideTable()">
     <header></header>
     <nav></nav>
     <main>
       <p>Hello, <span id="username"></span>! Browse our amazing products.</p>
+      <button onclick="showTable()">Just show me the products</button>
+      <button onclick="takeFlight()">Go on a journey</button>
       <table id="product-table">
-        <thead>
+        <thead id="product-table-head">
           <tr>
             <th>Name</th>
             <th>Type</th>
@@ -56,7 +58,6 @@
           </tr>
         </thead>
         <tbody>
-
         </tbody>
       </table>
     </main>
@@ -66,12 +67,10 @@
       $(document).ready(function() {
         $.getJSON("products.json", function(data) {
           var tableBody = $("#product-table tbody");
-    
-          // Iterate over each person object in the JSON data
+
           $.each(data, function(index, value) {
-            var row = $("<tr></tr>"); // Create a new table row
+            var row = $("<tr></tr>");
     
-            // Create table cells and fill them with the person's data
             row.append($("<td></td>").append(value.productName));
             row.append($("<td></td>").append(value.beanType));
             row.append($("<td></td>").append(value.origin));
@@ -80,7 +79,7 @@
             row.append($("<td></td>").append(value.properties));
             row.append($("<td></td>").append(value.description));
     
-            tableBody.append(row); // Add the row to the table body
+            tableBody.append(row);
           });
         });
       });

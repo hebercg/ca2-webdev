@@ -22,3 +22,27 @@ function letsGo(){
   document.getElementById("bean-origin").innerHTML = beanTypeArray[beanSelection];
 
 }
+
+function hideTable(){
+  document.getElementById("product-table").style.display="none";
+}
+
+function showTable(){
+  document.getElementById("product-table").style.display="block";
+}
+
+function takeFlight(){
+  var productTable = document.getElementById("product-table");
+  var tableRows = productTable.querySelectorAll("tr");
+  var rows = Array.from(tableRows).slice(1);
+  console.log(rows);
+  
+  
+  var randomProductSelect = Math.floor((Math.random()*(rows.length))+1);
+  console.log(randomProductSelect);
+
+  var randomProduct = rows[randomProductSelect-1];
+  var currentCountry = (randomProduct.cells[2].innerHTML);
+  alert(currentCountry);
+    
+}
