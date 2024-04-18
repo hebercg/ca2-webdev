@@ -5,8 +5,15 @@ function toggleDarkMode() {
 
 function loadElements() {
   var username;
-  if(localStorage.getItem("username")===null){
-    username=prompt("Please enter your name");
+  if(localStorage.getItem("username")==null){
+    var nameSelection = confirm("We would love to personalise your experience here just like we personalise your coffee! Would you like to give us your name?")
+    if(nameSelection == true){
+      username=prompt("Please enter your name");
+    }
+    else{
+      username="Coffee Lover"
+    }
+    
     localStorage.setItem("username",username);
   }
   else{
@@ -20,7 +27,6 @@ function loadElements() {
     $(document).ready(function() {
       $('#main-navigation').load('navigation.html');
     });
-    
 }
     
 
