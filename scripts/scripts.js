@@ -4,8 +4,15 @@ function toggleDarkMode() {
 }
 
 function addname() {
-  var username = prompt("Please enter your name");
-  document.getElementById("username").innerHTML = username;
+  var username;
+  if(localStorage.getItem("username")===null){
+    username=prompt("Please enter your name");
+    localStorage.setItem("username",username);
+  }
+  else{
+    username = localStorage.getItem("username");
+  }
+    document.getElementById("username").innerHTML = username;
 }
 
 function formValidate(){
