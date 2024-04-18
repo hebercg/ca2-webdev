@@ -1,7 +1,8 @@
 [
     {
         "productID": 1,
-        "productName": "Arabica",
+        "productName": "Heber's Oppositeland",
+        "beanType": "Arabica",
         "origin": "Brazil",
         "price": 8.99,
         "imageLink": "<img src='/images/coffeebeans1.jpg'/>",
@@ -11,5 +12,20 @@
             "aromatic"
         ],
         "description": "Our unique blend of some coffee beans, farm-to-table hand-roasted to perfection"
+    },
+
+    {
+        "productID": 2,
+        "productName": "Duncan Hills",
+        "beanType": "Robusta",
+        "origin": "Colombia",
+        "price": 6.66,
+        "imageLink": "<img src='/images/coffeebeans2.jpg'/>",
+        "properties": [
+            "blackened blood",
+            "awakens you from a thousand deaths",
+            "ultimate flavour"
+        ],
+        "description": "Do you like coffee Real coffee From the hills of Colombia"
     }
 ]
