@@ -19,7 +19,13 @@ function loadElements() {
   else{
     username = localStorage.getItem("username");
   }
-    document.getElementById("username").innerHTML = username;
+    if(document.getElementById("username") != null){
+      document.getElementById("username").innerHTML = username;
+    }
+    else{
+      //pass
+    }
+    
 
     var headerString = "<h1>Test Mode Because we like that</h1>";
     document.getElementById("page-header").innerHTML=headerString;
