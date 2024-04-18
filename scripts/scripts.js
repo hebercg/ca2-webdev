@@ -11,3 +11,14 @@ function addname() {
 function formValidate(){
   alert("This function works");
 }
+
+function letsGo(){
+  var grindArray = new Array("cafetiere","aeropress","percolator");
+  var beanTypeArray = new Array ("Colombian","Cuban","Brazilian");
+  var grindSelection = Math.floor((Math.random()*3)+1);
+  document.getElementById("grind-beans").innerHTML = grindArray[grindSelection];
+
+  var beanSelection = Math.floor((Math.random()*3)+1);
+  document.getElementById("bean-origin").innerHTML = beanTypeArray[beanSelection];
+
+}
