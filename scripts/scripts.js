@@ -4,8 +4,8 @@ function toggleDarkMode() {
 }
 
 function addname() {
-  var name = prompt("Please enter your name");
-  document.getElementById("name").innerHTML = name;
+  var username = prompt("Please enter your name");
+  document.getElementById("username").innerHTML = username;
 }
 
 function formValidate(){
