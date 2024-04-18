@@ -3,7 +3,7 @@ function toggleDarkMode() {
   document.body.classList.toggle("dark-mode");
 }
 
-function addname() {
+function loadElements() {
   var username;
   if(localStorage.getItem("username")===null){
     username=prompt("Please enter your name");
@@ -13,7 +13,17 @@ function addname() {
     username = localStorage.getItem("username");
   }
     document.getElementById("username").innerHTML = username;
+
+    var headerString = "<h1>Test Mode Because we like that</h1>";
+    document.getElementById("page-header").innerHTML=headerString;
+
+    $(document).ready(function() {
+      $('#main-navigation').load('navigation.html');
+    });
+    
 }
+    
+
 
 function formValidate(){
   alert("This function works");

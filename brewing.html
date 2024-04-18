@@ -38,9 +38,9 @@
 			  integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
 			  crossorigin="anonymous"></script>
   </head>
-  <body>
-    <header></header>
-    <nav></nav>
+  <body onload="loadElements()">
+    <header id="page-header"></header>
+    <nav id= main-navigation class="navbar navbar-expand-lg navbar-light bg-light"></nav>
     <main>
       <p>Hello, <span id="username"></span>! Learn with us about brewing the perfect coffee.</p>
       <button onClick="letsGo()">Let's go!</button>

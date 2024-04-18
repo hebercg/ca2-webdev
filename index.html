@@ -30,53 +30,18 @@
 
     <!-- when referring to scripts use -->
     <script src="scripts/scripts.js"></script>
+
+    <!-- JQuery -->
+    <script
+			  src="https://code.jquery.com/jquery-3.7.1.js"
+			  integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+			  crossorigin="anonymous"></script>
   </head>
-  <body onLoad="addname()">
-    <div>
-      <h1>Test Mode Because we like that</h1>
+  <body onLoad="loadElements()">
+    <header id="page-header"></header>
       <!-- navbar using bootstrap, this is a placeholder for now -->
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
-          <!-- placeholder colapsing button - Heber loves it -->
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <!-- Navbar links -->
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="index.html"
-                  >Home</a
-                >
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="about.html">About Us</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="order.html">Orders</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="products.html">Products</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="brewing.html"
-                  >Brew your own Liquid Gold</a
-                >
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="contact.html">Contact</a>
-              </li>
-            </ul>
-          </div>
-        </div>
+      <nav id= main-navigation class="navbar navbar-expand-lg navbar-light bg-light">
+        
       </nav>
       <main>
         <h2>Welcome to our coffee shop</h2>
@@ -86,6 +51,8 @@
         <hr />
         <p>All rights reserved</p>
       </footer>
-    </div>
+    <script>
+      
+    </script>
   </body>
 </html>
