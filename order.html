@@ -46,26 +46,26 @@
         Hello <span id="username"></span>! Please fill in this form.
       </p>
 
-      <form>
+      <form id="order-form">
         <table>
           <tr>
             <td><label for="mail">Your e-mail*</label></td>
-            <td><input type="email" name="mail" placeholder="Enter your email address" required /></td>
+            <td><input type="email" id="mail" placeholder="Enter your email address" required autofocus/></td>
           </tr>
 
           <tr>
-            <td><label for="namefield">First name*</label></td>
-            <td><input type="text" name="namefield" placeholder="Enter your name" minlength="3" maxlength="20" required autofocus/></td>
+            <td><label for="first-name">First name*</label></td>
+            <td><input type="text" id="first-name" placeholder="Enter your first name" minlength="2" maxlength="20" required/></td>
           </tr>
           
           <tr>
-              <td><label for="namefield">Last name*</label></td>
-              <td><input type="text" name="namefield" placeholder="Enter your name" minlength="3" maxlength="20"/></td>
+              <td><label for="last-name">Last name*</label></td>
+              <td><input type="text" id="last-name" placeholder="Enter your last name" minlength="2" maxlength="20" required/></td>
           </tr>
 
           <tr>
             <td><label for="address">Address Line 1*</label></td>
-            <td><input type="text" name="address" placeholder="Address Line 1" minlength="3" maxlength="20"/></td>
+            <td><input type="text" name="address" placeholder="Address Line 1" minlength="3" maxlength="20" required/></td>
           </tr>
 
           <tr>
@@ -79,8 +79,8 @@
           </tr>
 
           <tr>
-            <td><label for="namefield">City*</label></td>
-            <td><input type="text" name="namefield" placeholder="City" minlength="3" maxlength="20"/></td>
+            <td><label for="city">City*</label></td>
+            <td><input type="text" name="city" placeholder="City" minlength="3" maxlength="20"/></td>
           </tr>
 
           <!--County select menu-->
@@ -129,7 +129,7 @@
 
           <tr>
               <td><label for="phone">Phone number*</label></td>
-              <td><input type="tel" name="phone" placeholder="Enter your phone number" required pattern="[0-9]{10}"/></td>
+              <td><input type="tel" name="phone" placeholder="Enter your phone number" required/></td>
           </tr>
 
           <tr>
@@ -175,7 +175,8 @@
           </tr>
 
           <tr>
-              <td class="submit-button-row"><button onclick="formValidate()">Submit</button></td>
+              <td class="submit-button-row"><button onclick="formValidate()">Submit</button>
+                <p id="submit-message"></p></td>
           </tr>
       </table>
       </form>
