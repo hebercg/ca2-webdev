@@ -47,6 +47,7 @@
         <thead>
           <tr>
             <th>Name</th>
+            <th>Type</th>
             <th>Origin</th>
             <th>Price</th>
             <th>Image</th>
@@ -72,6 +73,7 @@
     
             // Create table cells and fill them with the person's data
             row.append($("<td></td>").append(value.productName));
+            row.append($("<td></td>").append(value.beanType));
             row.append($("<td></td>").append(value.origin));
             row.append($("<td></td>").append(value.price));
             row.append($("<td></td>").append(value.imageLink));
