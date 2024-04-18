@@ -25,30 +25,30 @@
     "productID": 3,
     "productName": "Red Honey",
     "beanType": "Dark roast",
-    "origin": "Colombia",
+    "origin": "Cuba",
     "price": 6.66,
     "imageLink": "<img src='/images/coffeebeans3.jpg'/>",
     "properties": ["sweet coffee", "maple syrup", "molasses"],
-    "description": "The Red Honey is produced using the honey method. The coffee beans in her flesh are dried, so that the sweet fruit flavor pulls deep into the bean. Then the hard coffee beans are roasted on a grid profile with a very long development time. This results in an extra sweet coffee."
+    "description": "The Red Honey is produced using the honey method. The sweet fruit flavor pulls deep into the bean. Then the hard coffee beans are roasted on a grid profile with a very long development time. This results in an extra sweet coffee."
   },
   {
     "productID": 4,
     "productName": "Arabella",
     "beanType": "Medium roast",
-    "origin": "Mix of Arabica beans from Brazil, Indonesia and Ethiopia",
+    "origin": "Ethiopia",
     "price": 6.66,
     "imageLink": "<img src='/images/coffeebeans4.jpg'/>",
     "properties": ["full bodied"],
-    "description": "The Arabella is a 100% arabica coffee with coffee beans from Sumatra, Brazil and the home country of the coffee, Ethiopia. You can make the Arabella as an espresso, but it is also tasty as quick-filter coffee."
+    "description": "The Arabella is a 100% arabica coffee with coffee beans from the home country of the coffee, Ethiopia. You can make the Arabella as an espresso, but it is also tasty as quick-filter coffee."
   },
   {
     "productID": 5,
     "productName": "Yellow Bourbon Unroasted",
     "beanType": "Raw",
-    "origin": "Mix of Arabica beans from the north of Brazil, Thiland and Mexico",
+    "origin": "Mix of Arabica beans from the north of Mexico",
     "price": 6.66,
     "imageLink": "<img src='/images/coffeebeans6.jpg'/>",
     "properties": ["full bodied"],
-    "description": "The Yellow Bourbon Unroasted is a 100% arabica coffee with coffee beans from Mexico, Brazil and Thailand. You can roast at your own taste, be it light, medium or dark roast."
+    "description": "The Yellow Bourbon Unroasted is a 100% arabica coffee with coffee beans from Mexico. You can roast at your own taste, be it light, medium or dark roast."
   }
 ]
