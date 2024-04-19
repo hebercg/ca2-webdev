@@ -1,3 +1,18 @@
+/*styling header using google fonts*/
+
+header h1 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+header h3 {
+  font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
 /*Designing for Mobile-first; dark theme first*/
 
 main {
@@ -11,6 +26,15 @@ main {
   background-repeat: no-repeat;
   height: 100vh;
   margin: 0;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+main h2 {
+  font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 269;
+  font-style: normal;
 }
 /*dark mode stuff*/
 @media (prefers-color-scheme: dark) {
@@ -74,6 +98,9 @@ main {
 
 .navbar .navbar-brand,
 .navbar .nav-link {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
   color: #5d5652;
 }
 
