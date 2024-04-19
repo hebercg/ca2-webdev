@@ -48,15 +48,21 @@ function loadElements() {
 }
 
 function formValidate() {
-  var lettersAndDash = /^[A-z-]+$/;
+  var lettersAndDash = /^[A-Za-z-]+$/;
   var numbers = /^[0-9]+$/;
+  var lettersAndNumbers = /^[0-9A-Za-z]+$/;
 
   if (document.getElementById("order-form").checkValidity()) {
     if (
       document.getElementById("first-name").value.match(lettersAndDash) &&
-      document.getElementById("last-name".value.match(lettersAndDash))
+      document.getElementById("last-name").value.match(lettersAndDash)
     ) {
-      //next
+      if(document.getElementById("eircode").value.match(/^[0-9A-Za-z]{7}/)){
+        //next
+      }
+      else{
+        alert("Incorrect eircode format. Please enter full 7-digit eircode without spaces")
+      }
     } else {
       alert(
         "Please provide your first and last name. If you do happen to have numbers in your name, contact us."
