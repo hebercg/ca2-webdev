@@ -91,7 +91,7 @@ function addCardContent(){
     for(i=0;i<imageLinkArray.length;i++){
       document.getElementById("card-group").innerHTML+=cardsContent;
       var image = document.getElementsByTagName("img")[i];
-      image.src=".."+imageLinkArray[i];
+      image.src=imageLinkArray[i];
       image.alt=imageLinkArray[i];
       document.getElementsByClassName("card-title")[i].innerHTML=productNameArray[i];
       document.getElementsByClassName("card-subtitle mb-2 text-muted")[i].innerHTML=originArray[i];
