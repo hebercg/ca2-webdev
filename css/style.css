@@ -114,3 +114,93 @@ main h2 {
 .navbar-toggler-icon {
   background-color: #e7e4d7;
 }
+
+footer {
+  background-color: hsl(26, 46%, 61%);
+  color: #fff;
+  padding: 20px;
+  display: flex;
+  position: fixed; /* Fixed positioning for visibility across the entire page */
+  bottom: 0; /* Positioned at the bottom of the page */
+  left: 0; /* Positioned to the left */
+  width: 100%; /* Full width of the screen */
+  z-index: 999; /* Ensure the footer is positioned above other elements */
+}
+
+.footer-column {
+  width: calc(25% - 50px);
+  margin-right: 50px;
+}
+
+.footer-column h4, .footer-column ul {
+  color: #fff;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-column ul li a:hover {
+  text-decoration: underline;
+}
+
+.footer-column.soсial .social-media-link {
+  display: inline-block;
+}
+
+.footer-column.social.social-media-link img {
+  cursor: pointer; 
+}
+
+/* */
+
+.image-container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.image {
+  width: 100%;
+  height: 100vh; 
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.text-overlay {
+  text-align: center;
+  position: absolute;
+  color: white;
+  width: 50%; 
+  padding: 0 20px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+.text-overlay.center {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.text-overlay.left {
+  left: 0; 
+  text-align: left;
+  top: 30%;
+}
+
+.text-overlay.right {
+  right: 0; 
+  text-align: right;
+  width: 35%;
+  top: 40%;
+}
+
+.text-overlay p {
+  font-size: 24px;
+}
