@@ -16,9 +16,9 @@ header h3 {
 /*Designing for Mobile-first; dark theme first*/
 
 main {
-  background-image: linear-gradient(
-      rgba(231, 228, 215, 0.5),
-      rgba(231, 228, 215, 0.5)
+  background: linear-gradient(to top right,
+      rgba(61, 24, 10, 0.5),
+      rgba(#3f0e03)
     ),
     url(../images/backgroundimage.jpg);
   background-size: cover;
@@ -71,10 +71,6 @@ main h2 {
 
 .dark-mode-text:hover {
   color: #a75c30; /* Lighter brown hover for the dark mode */
-}
-/* Smallest phones if we want to account for those */
-@media screen and (max-width: 600px) {
-  /*Smallest phones*/
 }
 
 /* tablets */
