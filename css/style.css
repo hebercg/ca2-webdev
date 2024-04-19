@@ -37,6 +37,13 @@ main h2 {
   font-weight: 269;
   font-style: normal;
 }
+
+/*content div*/
+.content-div{
+  background-color: #211008;
+  opacity: 70%;
+}
+
 /*dark mode stuff*/
 @media (prefers-color-scheme: dark) {
   main {

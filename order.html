@@ -47,201 +47,203 @@
     <main>
       <p>Hello <span id="username"></span>! Please fill in this form.</p>
 
-      <form id="order-form">
-        <table>
-          <tr>
-            <td><label for="first-name">First name*</label></td>
-            <td>
-              <input
-                type="text"
-                id="first-name"
-                placeholder="Enter your first name"
-                minlength="2"
-                maxlength="20"
-                required
-                autofocus
-              />
-            </td>
-          </tr>
+      <div class="content-div">
+        <form id="order-form">
+          <table>
+            <tr>
+              <td><label for="first-name">First name*</label></td>
+              <td>
+                <input
+                  type="text"
+                  id="first-name"
+                  placeholder="Enter your first name"
+                  minlength="2"
+                  maxlength="20"
+                  required
+                  autofocus
+                />
+              </td>
+            </tr>
 
-          <tr>
-            <td><label for="last-name">Last name*</label></td>
-            <td>
-              <input
-                type="text"
-                id="last-name"
-                placeholder="Enter your last name"
-                minlength="2"
-                maxlength="20"
-                required
-              />
-            </td>
-          </tr>
+            <tr>
+              <td><label for="last-name">Last name*</label></td>
+              <td>
+                <input
+                  type="text"
+                  id="last-name"
+                  placeholder="Enter your last name"
+                  minlength="2"
+                  maxlength="20"
+                  required
+                />
+              </td>
+            </tr>
 
-          <tr>
-            <td><label for="address">Address Line 1*</label></td>
-            <td>
-              <input
-                type="text"
-                name="address"
-                placeholder="Address Line 1"
-                minlength="3"
-                maxlength="20"
-                required
-              />
-            </td>
-          </tr>
+            <tr>
+              <td><label for="address">Address Line 1*</label></td>
+              <td>
+                <input
+                  type="text"
+                  name="address"
+                  placeholder="Address Line 1"
+                  minlength="3"
+                  maxlength="20"
+                  required
+                />
+              </td>
+            </tr>
 
-          <tr>
-            <td><label for="address">Address Line 2</label></td>
-            <td>
-              <input
-                type="text"
-                name="address"
-                placeholder="Address Line 2"
-                minlength="3"
-                maxlength="20"
-              />
-            </td>
-          </tr>
+            <tr>
+              <td><label for="address">Address Line 2</label></td>
+              <td>
+                <input
+                  type="text"
+                  name="address"
+                  placeholder="Address Line 2"
+                  minlength="3"
+                  maxlength="20"
+                />
+              </td>
+            </tr>
 
-          <tr>
-            <td><label for="address">Address Line 3</label></td>
-            <td>
-              <input
-                type="text"
-                name="address"
-                placeholder="Address Line 3"
-                minlength="3"
-                maxlength="20"
-              />
-            </td>
-          </tr>
+            <tr>
+              <td><label for="address">Address Line 3</label></td>
+              <td>
+                <input
+                  type="text"
+                  name="address"
+                  placeholder="Address Line 3"
+                  minlength="3"
+                  maxlength="20"
+                />
+              </td>
+            </tr>
 
-          <tr>
-            <td><label for="city">City*</label></td>
-            <td>
-              <input
-                type="text"
-                name="city"
-                placeholder="City"
-                minlength="3"
-                maxlength="20"
-              />
-            </td>
-          </tr>
+            <tr>
+              <td><label for="city">City*</label></td>
+              <td>
+                <input
+                  type="text"
+                  name="city"
+                  placeholder="City"
+                  minlength="3"
+                  maxlength="20"
+                />
+              </td>
+            </tr>
 
-          <!--County select menu-->
-          <!--https://en.wikipedia.org/wiki/List_of_Eircode_routing_areas_in_Ireland-->
-          <tr>
-            <td><label for="county-selection">County</label></td>
-            <td>
-              <select id="county-selection">
-                <option value="title" selected>--Please select--</option>
-                <option value="Carlow">Carlow</option>
-                <option value="Cavan">Cavan</option>
-                <option value="Clare">Clare</option>
-                <option value="Cork">Cork</option>
-                <option value="Donegal">Donegal</option>
-                <option value="Dublin County">Dublin County</option>
-                <option value="Galway">Galway</option>
-                <option value="Kerry">Kerry</option>
-                <option value="Kildare">Kildare</option>
-                <option value="Kilkenny">Kilkenny</option>
-                <option value="Laois">Laois</option>
-                <option value="Leitrim">Leitrim</option>
-                <option value="Limerick">Limerick</option>
-                <option value="Longford">Longford</option>
-                <option value="Louth">Louth</option>
-                <option value="Mayo">Mayo</option>
-                <option value="Meath">Meath</option>
-                <option value="Monaghan">Monaghan</option>
-                <option value="Offaly">Offaly</option>
-                <option value="Roscommon">Roscommon</option>
-                <option value="Sligo">Sligo</option>
-                <option value="Tipperary">Tipperary</option>
-                <option value="Waterford">Waterford</option>
-                <option value="Westmeath">Westmeath</option>
-                <option value="Wexford">Wexford</option>
-                <option value="Wicklow">Wicklow</option>
-              </select>
-            </td>
-          </tr>
+            <!--County select menu-->
+            <!--https://en.wikipedia.org/wiki/List_of_Eircode_routing_areas_in_Ireland-->
+            <tr>
+              <td><label for="county-selection">County</label></td>
+              <td>
+                <select id="county-selection">
+                  <option value="title" selected>--Please select--</option>
+                  <option value="Carlow">Carlow</option>
+                  <option value="Cavan">Cavan</option>
+                  <option value="Clare">Clare</option>
+                  <option value="Cork">Cork</option>
+                  <option value="Donegal">Donegal</option>
+                  <option value="Dublin County">Dublin County</option>
+                  <option value="Galway">Galway</option>
+                  <option value="Kerry">Kerry</option>
+                  <option value="Kildare">Kildare</option>
+                  <option value="Kilkenny">Kilkenny</option>
+                  <option value="Laois">Laois</option>
+                  <option value="Leitrim">Leitrim</option>
+                  <option value="Limerick">Limerick</option>
+                  <option value="Longford">Longford</option>
+                  <option value="Louth">Louth</option>
+                  <option value="Mayo">Mayo</option>
+                  <option value="Meath">Meath</option>
+                  <option value="Monaghan">Monaghan</option>
+                  <option value="Offaly">Offaly</option>
+                  <option value="Roscommon">Roscommon</option>
+                  <option value="Sligo">Sligo</option>
+                  <option value="Tipperary">Tipperary</option>
+                  <option value="Waterford">Waterford</option>
+                  <option value="Westmeath">Westmeath</option>
+                  <option value="Wexford">Wexford</option>
+                  <option value="Wicklow">Wicklow</option>
+                </select>
+              </td>
+            </tr>
 
-          <tr>
-            <td><label for="eircode">Eircode</label></td>
-            <td>
-              <input
-                type="text"
-                id="eircode"
-                placeholder="Enter your eircode"
-              />
-            </td>
-          </tr>
+            <tr>
+              <td><label for="eircode">Eircode</label></td>
+              <td>
+                <input
+                  type="text"
+                  id="eircode"
+                  placeholder="Enter your eircode"
+                />
+              </td>
+            </tr>
 
-          <tr>
-            <td><label for="phone">Phone number*</label></td>
-            <td>
-              <input
-                type="tel"
-                name="phone"
-                placeholder="Enter your phone number"
-                required
-              />
-            </td>
-          </tr>
+            <tr>
+              <td><label for="phone">Phone number*</label></td>
+              <td>
+                <input
+                  type="tel"
+                  name="phone"
+                  placeholder="Enter your phone number"
+                  required
+                />
+              </td>
+            </tr>
 
-          <tr>
-            <td>
-              <label for="contact-method"
-                >Please select your preferred contact method</label
-              >
-            </td>
-            <td>
-              <input type="radio" name="contact-method" id="phone" />
-              <label for="phone">Phone</label>
+            <tr>
+              <td>
+                <label for="contact-method"
+                  >Please select your preferred contact method</label
+                >
+              </td>
+              <td>
+                <input type="radio" name="contact-method" id="phone" />
+                <label for="phone">Phone</label>
 
-              <input type="radio" name="contact-method" id="email" />
-              <label for="email">E-Mail</label>
-            </td>
-          </tr>
+                <input type="radio" name="contact-method" id="email" />
+                <label for="email">E-Mail</label>
+              </td>
+            </tr>
 
-          <tr>
-            <td><label>Additional comments</label></td>
-            <td><textarea cols="40" rows="10"></textarea></td>
-          </tr>
+            <tr>
+              <td><label>Additional comments</label></td>
+              <td><textarea cols="40" rows="10"></textarea></td>
+            </tr>
 
-          <tr>
-            <td>
-              <label for="tandc"
-                >I agree to your
-                <a
-                  target="_blank"
-                  href="https://www.lawdistrict.com/documents/soul-bill-of-sale-template.pdf"
-                  >Terms and Conditions</a
-                ></label
-              >
-            </td>
-            <td><input type="checkbox" name="tandc" /></td>
-          </tr>
+            <tr>
+              <td>
+                <label for="tandc"
+                  >I agree to your
+                  <a
+                    target="_blank"
+                    href="https://www.lawdistrict.com/documents/soul-bill-of-sale-template.pdf"
+                    >Terms and Conditions</a
+                  ></label
+                >
+              </td>
+              <td><input type="checkbox" name="tandc" /></td>
+            </tr>
 
-          <tr>
-            <td>
-              <label for="newsletter-sub"
-                >I want to subscribe to your monthly newsletter</label
-              >
-            </td>
-            <td><input type="checkbox" name="newsletter-sub" checked /></td>
-          </tr>
+            <tr>
+              <td>
+                <label for="newsletter-sub"
+                  >I want to subscribe to your monthly newsletter</label
+                >
+              </td>
+              <td><input type="checkbox" name="newsletter-sub" checked /></td>
+            </tr>
 
-          <tr>
-            <td class="submit-button-row">
-              <button onclick="formValidate()">Submit</button>
-              <p id="submit-message"></p>
-            </td>
-          </tr>
-        </table>
-      </form>
+            <tr>
+              <td class="submit-button-row">
+                <button onclick="formValidate()">Submit</button>
+                <p id="submit-message"></p>
+              </td>
+            </tr>
+          </table>
+        </form>
+      </div>
     </main>
     <footer></footer>
   </body>
