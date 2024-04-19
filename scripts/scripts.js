@@ -38,7 +38,21 @@ function loadElements() {
 
 
 function formValidate(){
-  alert("This function works");
+  var letters = /^[A-Za-z]+$/;
+  var numbers = /^[0-9]+$/;
+
+  if(document.getElementById("order-form").checkValidity()){
+    if(document.getElementById("first-name").value.match(letters) && document.getElementById("last-name".value.match(letters))){
+      //next
+    }
+    else{
+      alert("Unless your father's name is Elon, you need to give us your real name.");
+    }
+  }
+  else{
+    //HTML form errors first
+  }
+  
 }
 
 function letsGo(){
