@@ -1,9 +1,25 @@
+/*styling header using google fonts*/
+
+header h1 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+header h3 {
+  font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
 /*Designing for Mobile-first; dark theme first*/
 
 main {
-  background-image: linear-gradient(
-      rgba(231, 228, 215, 0.5),
-      rgba(231, 228, 215, 0.5)
+  background: linear-gradient(
+      to top right,
+      rgba(61, 24, 10, 0.5),
+      rgba(#3f0e03)
     ),
     url(../images/backgroundimage.jpg);
   background-size: cover;
@@ -11,6 +27,15 @@ main {
   background-repeat: no-repeat;
   height: 100vh;
   margin: 0;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+main h2 {
+  font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 269;
+  font-style: normal;
 }
 /*dark mode stuff*/
 @media (prefers-color-scheme: dark) {
@@ -48,10 +73,6 @@ main {
 .dark-mode-text:hover {
   color: #a75c30; /* Lighter brown hover for the dark mode */
 }
-/* Smallest phones if we want to account for those */
-@media screen and (max-width: 600px) {
-  /*Smallest phones*/
-}
 
 /* tablets */
 @media screen and (min-width: 768px) {
@@ -67,60 +88,18 @@ main {
     color: #3f0e03; /* Dark brown text */
   }
 }
-
-/* fonts
-// <uniquifier>: Use a unique and descriptive class name
-// <weight>: Use a value from 200 to 900 */
-.description-text {
-  font-family: "Crimson Pro", serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-}
-/* <uniquifier>: Use a unique and descriptive class name
-// <weight>: Use a value from 300 to 700 */
-.maintext {
-  font-family: "Quicksand", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 300;
-  font-style: normal;
-}
-.title {
-  font-family: "Pacifico", cursive;
-  font-weight: 400;
-  font-style: normal;
-}
-.shadow{ /*for text*/
-  text-shadow: 
-  -1px  1px 0 black,
-   1px  1px 0 black;
-}
-/* background photo style */
-.background {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  background-size: cover;
-  background-position: center;
-  opacity: 0.6; 
-}
-.text {
-  color: #eec78e;
-  font-size: 24px;
-  padding: 20px;
-  z-index: 1;
-}
-/* navbar styling stuff - background and links - lets change the colours to */
+/* navbar styling stuff - background and links  */
 .navbar {
   background-color: #885436;
 }
 
 .navbar .navbar-brand,
 .navbar .nav-link {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
   color: #5d5652;
+  transition: background-color 1s;
 }
 
 .navbar .nav-link.active {
@@ -135,90 +114,3 @@ main {
 .navbar-toggler-icon {
   background-color: #e7e4d7;
 }
-
-footer {
-  background-color: hsl(26, 46%, 61%);
-  color: #fff;
-  padding: 20px;
-  display: flex;
-  position: fixed; /* Fixed positioning for visibility across the entire page */
-  bottom: 0; /* Positioned at the bottom of the page */
-  left: 0; /* Positioned to the left */
-  width: 100%; /* Full width of the screen */
-  z-index: 999; /* Ensure the footer is positioned above other elements */
-}
-
-.footer-column {
-  width: calc(25% - 50px);
-  margin-right: 50px;
-}
-
-.footer-column h4, .footer-column ul {
-  color: #fff;
-  padding: 0;
-}
-
-.footer-column ul li {
-  margin-bottom: 10px;
-}
-
-.footer-column ul li a {
-  color: #fff;
-  text-decoration: none;
-}
-
-.footer-column ul li a:hover {
-  text-decoration: underline;
-}
-
-.footer-column.soсial .social-media-link {
-  display: inline-block;
-}
-
-.footer-column.social.social-media-link img {
-  cursor: pointer; 
-}
-
-/* */
-
-.image-container {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-}
-
-.image {
-  width: 100%;
-  height: 100vh; 
-  background-size: cover;
-  background-position: center;
-  position: relative;
-}
-
-.text-overlay {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  text-align: center;
-  color: white;
-  width: 50%; 
-  padding: 0 20px;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-.text-overlay.left {
-  left: 0; /* Для текста на левой стороне */
-  text-align: left;
-}
-
-.text-overlay.right {
-  right: 0; /* Для текста на правой стороне */
-  text-align: right;
-
-
-}
-
-.text-overlay p {
-  font-size: 24px;
-}
-

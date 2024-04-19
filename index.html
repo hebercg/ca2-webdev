@@ -6,7 +6,13 @@
     <!-- other meta tags for SEO to follow later-->
 
     <title>Home</title>
-
+    <!--Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,269;1,269&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
     <!-- link stylesheet -->
     <link rel="stylesheet" href="css/style.css" />
 
@@ -28,54 +34,31 @@
       crossorigin="anonymous"
     ></script>
 
-    <!-- when referring to scripts use -->
-    <script src="scripts/scripts.js"></script>
-
     <!-- JQuery -->
     <script
-			  src="https://code.jquery.com/jquery-3.7.1.js"
-			  integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
-			  crossorigin="anonymous"></script>
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- when referring to scripts use -->
+    <script src="scripts/scripts.js"></script>
   </head>
-  <body onLoad="loadElements()">
+  <body>
     <header id="page-header"></header>
-      <!-- navbar using bootstrap, this is a placeholder for now -->
-      <nav id= main-navigation class="navbar navbar-expand-lg navbar-light bg-light">
-        
-      </nav>
-      <main>
-        <h2>Welcome to our coffee shop</h2>
-        <p>Hello, <span id="username"></span>! Welcome to our amazing website.</p>
-      </main>
-      <footer>
-        <div class="footer-column about-us">
-            <h4>About the shop</h4>
-            <p>Coffee enthusiasts, we supply and prepare coffee beans from the largest producing countries.</p>
-        </div>
-        <div class="footer-column menu">
-            <h4>Menu</h4>
-            <ul>
-                <li><a href="about.html">Info</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </div>
-        <div class="footer-column email-input">
-            <h4>Join our VIP CLUB</h4>
-            <form>
-                <input type="email" name="email" placeholder="Enter your email address">
-                <tr>
-                  <td class="submit-button-row"><button onclick="formValidate()">Submit</button></td>
-              </tr>
-            </form>
-        </div>
-        <div class="footer-column social">
-          <a href="https://www.ncirl.ie/">
-              <img src="images/NCI-Logo.png" alt="Social">
-          </a>
-        </div>
-      </footer>
-    <script>
-      
-    </script>
+    <!-- navbar using bootstrap, this is a placeholder for now -->
+    <nav
+      id="main-navigation"
+      class="navbar navbar-expand-lg navbar-light bg-light"
+    ></nav>
+    <main>
+      <h2>Welcome to the coffee paradise</h2>
+      <p>Hello, <span id="username"></span>! Welcome to our website.</p>
+    </main>
+    <footer>
+      <hr />
+      <p>All rights reserved</p>
+    </footer>
+    <script></script>
   </body>
 </html>

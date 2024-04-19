@@ -29,58 +29,106 @@
       crossorigin="anonymous"
     ></script>
 
-    <!-- when referring to scripts use -->
-    <script src="scripts/scripts.js"></script>
-
     <!-- JQuery -->
     <script
-			  src="https://code.jquery.com/jquery-3.7.1.js"
-			  integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
-			  crossorigin="anonymous"></script>
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"
+    ></script>
+    <!-- when referring to scripts use -->
+    <script src="scripts/scripts.js"></script>
   </head>
-  <body onload="loadElements()">
+  <body>
     <header id="page-header"></header>
-    <nav id= main-navigation class="navbar navbar-expand-lg navbar-light bg-light"></nav>
+    <nav
+      id="main-navigation"
+      class="navbar navbar-expand-lg navbar-light bg-light"
+    ></nav>
     <main>
-      <p>
-        Hello <span id="username"></span>! Please fill in this form.
-      </p>
+      <p>Hello <span id="username"></span>! Please fill in this form.</p>
 
       <form id="order-form">
         <table>
           <tr>
-            <td><label for="mail">Your e-mail*</label></td>
-            <td><input type="email" id="mail" placeholder="Enter your email address" required autofocus/></td>
+            <td><label for="first-name">First name*</label></td>
+            <td>
+              <input
+                type="text"
+                id="first-name"
+                placeholder="Enter your first name"
+                minlength="2"
+                maxlength="20"
+                required
+                autofocus
+              />
+            </td>
           </tr>
 
           <tr>
-            <td><label for="first-name">First name*</label></td>
-            <td><input type="text" id="first-name" placeholder="Enter your first name" minlength="2" maxlength="20" required/></td>
-          </tr>
-          
-          <tr>
-              <td><label for="last-name">Last name*</label></td>
-              <td><input type="text" id="last-name" placeholder="Enter your last name" minlength="2" maxlength="20" required/></td>
+            <td><label for="last-name">Last name*</label></td>
+            <td>
+              <input
+                type="text"
+                id="last-name"
+                placeholder="Enter your last name"
+                minlength="2"
+                maxlength="20"
+                required
+              />
+            </td>
           </tr>
 
           <tr>
             <td><label for="address">Address Line 1*</label></td>
-            <td><input type="text" name="address" placeholder="Address Line 1" minlength="3" maxlength="20" required/></td>
+            <td>
+              <input
+                type="text"
+                name="address"
+                placeholder="Address Line 1"
+                minlength="3"
+                maxlength="20"
+                required
+              />
+            </td>
           </tr>
 
           <tr>
             <td><label for="address">Address Line 2</label></td>
-            <td><input type="text" name="address" placeholder="Address Line 2" minlength="3" maxlength="20"/></td>
+            <td>
+              <input
+                type="text"
+                name="address"
+                placeholder="Address Line 2"
+                minlength="3"
+                maxlength="20"
+              />
+            </td>
           </tr>
 
           <tr>
             <td><label for="address">Address Line 3</label></td>
-            <td><input type="text" name="address" placeholder="Address Line 3" minlength="3" maxlength="20"/></td>
+            <td>
+              <input
+                type="text"
+                name="address"
+                placeholder="Address Line 3"
+                minlength="3"
+                maxlength="20"
+              />
+            </td>
           </tr>
 
           <tr>
             <td><label for="city">City*</label></td>
-            <td><input type="text" name="city" placeholder="City" minlength="3" maxlength="20"/></td>
+            <td>
+              <input
+                type="text"
+                name="city"
+                placeholder="City"
+                minlength="3"
+                maxlength="20"
+              />
+            </td>
           </tr>
 
           <!--County select menu-->
@@ -89,7 +137,6 @@
             <td><label for="county-selection">County</label></td>
             <td>
               <select id="county-selection">
-
                 <option value="title" selected>--Please select--</option>
                 <option value="Carlow">Carlow</option>
                 <option value="Cavan">Cavan</option>
@@ -121,64 +168,79 @@
             </td>
           </tr>
 
-
           <tr>
             <td><label for="eircode">Eircode</label></td>
-            <td><input type="text" name="eircode" placeholder="Enter your eircode" minlength="3" maxlength="20"/></td>
+            <td>
+              <input
+                type="text"
+                id="eircode"
+                placeholder="Enter your eircode"
+              />
+            </td>
           </tr>
 
           <tr>
-              <td><label for="phone">Phone number*</label></td>
-              <td><input type="tel" name="phone" placeholder="Enter your phone number" required/></td>
+            <td><label for="phone">Phone number*</label></td>
+            <td>
+              <input
+                type="tel"
+                name="phone"
+                placeholder="Enter your phone number"
+                required
+              />
+            </td>
           </tr>
 
           <tr>
-              <td><label for="contact-method">Please select your preferred contact method</label></td>
-              <td><input type="radio" name="contact-method" id="phone" />
-                  <label for="phone">Phone</label>
-                      
-                  <input type="radio" name="contact-method" id="email" />
-                  <label for="email">E-Mail</label>
-              </td>
-          </tr>
+            <td>
+              <label for="contact-method"
+                >Please select your preferred contact method</label
+              >
+            </td>
+            <td>
+              <input type="radio" name="contact-method" id="phone" />
+              <label for="phone">Phone</label>
 
-          
-          <!--https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select-->
-          <tr>
-              <td><label for="issue-selection">Please select the subject area of your question so that we can best direct it</label></td>
-              <td><select name="issue-selection">
-
-                  <option value="title" selected>--Please choose--</option>
-                  <option value="finance">Taxes & Finance</option>
-                  <option value="healthcare">Healthcare</option>
-                  <option value="housing">Housing</option>
-                  <option value="career">Career</option>
-                  <option value="other">Other (please specify)</option>
-
-                  </select>
-              </td>
+              <input type="radio" name="contact-method" id="email" />
+              <label for="email">E-Mail</label>
+            </td>
           </tr>
 
           <tr>
-              <td><label>Additional comments</label></td>
-              <td><textarea cols="40" rows="10"></textarea></td>
+            <td><label>Additional comments</label></td>
+            <td><textarea cols="40" rows="10"></textarea></td>
           </tr>
 
           <tr>
-              <td><label for="tandc">I agree to your <a target="_blank" href="https://www.lawdistrict.com/documents/soul-bill-of-sale-template.pdf">Terms and Conditions</a></label></td>
-              <td><input type="checkbox" name="tandc" /></td>
+            <td>
+              <label for="tandc"
+                >I agree to your
+                <a
+                  target="_blank"
+                  href="https://www.lawdistrict.com/documents/soul-bill-of-sale-template.pdf"
+                  >Terms and Conditions</a
+                ></label
+              >
+            </td>
+            <td><input type="checkbox" name="tandc" /></td>
           </tr>
 
           <tr>
-              <td><label for="newsletter-sub">I want to subscribe to your monthly newsletter</label></td>
-              <td><input type="checkbox" name="newsletter-sub" checked /></td>
+            <td>
+              <label for="newsletter-sub"
+                >I want to subscribe to your monthly newsletter</label
+              >
+            </td>
+            <td><input type="checkbox" name="newsletter-sub" checked /></td>
           </tr>
 
           <tr>
-              <td class="submit-button-row"><button onclick="formValidate()">Submit</button>
-                <p id="submit-message"></p></td>
+            <td class="submit-button-row">
+              <button onclick="formValidate()">Submit</button>
+              <p id="submit-message"></p>
+            </td>
           </tr>
-      </table>
+        </table>
       </form>
     </main>
     <footer></footer>
