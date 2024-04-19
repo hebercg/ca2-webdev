@@ -89,3 +89,42 @@ main {
 .navbar-toggler-icon {
   background-color: #e7e4d7;
 }
+
+footer {
+  background-color: hsl(26, 46%, 61%);
+  color: #fff;
+  padding: 20px;
+  display: flex;
+  
+}
+
+.footer-column {
+  width: calc(25% - 50px);
+  margin-right: 50px;
+}
+
+.footer-column h4, .footer-column ul {
+  color: #fff;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-column ul li a:hover {
+  text-decoration: underline;
+}
+
+.footer-column.soсial .social-media-link {
+  display: inline-block;
+}
+
+.footer-column.social.social-media-link img {
+  cursor: pointer; 
+}
