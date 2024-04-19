@@ -1,6 +1,27 @@
 //Heber almost had a hearth attach to make this work
+var productIDArray=[];
+var productNameArray=[];
+var beanTypeArray=[];
+var originArray=[];
+var priceArray=[];
+var imageLinkArray=[];
+var propertiesArray=[];
+var descriptionArray=[];
+
 $(document).ready(function () {
-  loadElements();
+  
+  $.getJSON("products.json", function(data){
+    $.each(data, function(index,value){
+      productIDArray.push(value.productID);
+      productNameArray.push(value.productName);
+      beanTypeArray.push(value.beanType);
+      originArray.push(value.origin);
+      priceArray.push(value.price);
+      imageLinkArray.push(value.imageLink);
+      propertiesArray.push(value.properties);
+      descriptionArray.push(value.description);
+    })
+  })
   $("#main-navigation").load("navigation.html");
   setTimeout(() => {
     // Get the current page
@@ -14,6 +35,7 @@ $(document).ready(function () {
       }
     });
   }, "50");
+  loadElements();
 });
 /* JS function to trigger to toggle an event, in this case a button if we wanted to*/
 function toggleDarkMode() {
