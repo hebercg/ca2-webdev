@@ -45,6 +45,11 @@ $(document).ready(function () {
   }, "50");
   loadElements();
 });
+
+/*footer*/
+$(function() {
+  $("#block-footer").load("footer.html");
+});
 /* JS function to trigger to toggle an event, in this case a button if we wanted to*/
 function toggleDarkMode() {
   document.body.classList.toggle("dark-mode");
