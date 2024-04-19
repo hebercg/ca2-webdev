@@ -5,7 +5,7 @@
     "beanType": "Arabica",
     "origin": "Brazil",
     "price": 8.99,
-    "imageLink": "<img src='/images/coffeebeans1.jpg'/>",
+    "imageLink": "/images/coffeebeans1.jpg",
     "properties": ["rich", "nutty", "aromatic"],
     "description": "The Yellow Bourbon is a beautiful Single Estate coffee from the Fazendas Carpinteiros from Brazil. The coffee bushes of Yellow Bourbon coffee beans grow in harmony with nature and can be found near mountains, forests and waterfalls. Brazil's wooded land offers plenty of room for rich biodiversity in plants, land animals, birds and insects. It is a mildly sweet and full coffee with a delicious bite. Taste this accessible Brazilian coffee and discover light notes of cocoa, hazelnut and walnut with a hint of tobacco in the aftertaste."
   },
@@ -16,7 +16,7 @@
     "beanType": "Robusta",
     "origin": "Colombia",
     "price": 6.66,
-    "imageLink": "<img src='/images/coffeebeans2.jpg'/>",
+    "imageLink": "/images/coffeebeans2.jpg",
     "properties": ["Full & Powerful"],
     "description": "Do you like coffee Real coffee From the hills of Colombia"
   },
@@ -27,7 +27,7 @@
     "beanType": "Dark roast",
     "origin": "Cuba",
     "price": 6.66,
-    "imageLink": "<img src='/images/coffeebeans3.jpg'/>",
+    "imageLink": "/images/coffeebeans3.jpg",
     "properties": ["sweet coffee", "maple syrup", "molasses"],
     "description": "The Red Honey is produced using the honey method. The sweet fruit flavor pulls deep into the bean. Then the hard coffee beans are roasted on a grid profile with a very long development time. This results in an extra sweet coffee."
   },
@@ -37,7 +37,7 @@
     "beanType": "Medium roast",
     "origin": "Ethiopia",
     "price": 6.66,
-    "imageLink": "<img src='/images/coffeebeans4.jpg'/>",
+    "imageLink": "/images/coffeebeans4.jpg",
     "properties": ["full bodied"],
     "description": "The Arabella is a 100% arabica coffee with coffee beans from the home country of the coffee, Ethiopia. You can make the Arabella as an espresso, but it is also tasty as quick-filter coffee."
   },
@@ -47,7 +47,7 @@
     "beanType": "Raw",
     "origin": "Mix of Arabica beans from the north of Mexico",
     "price": 6.66,
-    "imageLink": "<img src='/images/coffeebeans7.jpg'/>",
+    "imageLink": "/images/coffeebeans7.jpg",
     "properties": ["full bodied"],
     "description": "The Yellow Bourbon Unroasted is a 100% arabica coffee with coffee beans from Mexico. You can roast at your own taste, be it light, medium or dark roast."
   }
