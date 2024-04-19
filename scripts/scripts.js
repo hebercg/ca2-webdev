@@ -48,17 +48,17 @@ function loadElements() {
 }
 
 function formValidate() {
-  var letters = /^[A-Za-z]+$/;
+  var lettersAndDash = /^[A-z-]+$/;
   var numbers = /^[0-9]+$/;
 
   if (document.getElementById("order-form").checkValidity()) {
     if (
-      document.getElementById("first-name").value.match(letters) &&
-      document.getElementById("last-name".value.match(letters))
+      document.getElementById("first-name").value.match(lettersAndDash) &&
+      document.getElementById("last-name".value.match(lettersAndDash))
     ) {
       //next
     } else {
-      alert("Unless you prefer to be annonymous, give us your real name.");
+      alert("Please provide your first and last name. If you do happen to have numbers in your name, contact us.");
     }
   } else {
     //HTML form errors first
