@@ -1,3 +1,17 @@
+$(document).ready(function () {
+  // Get the current page
+  var currentUrl = window.location.href;
+
+  // Remove the current/active class from the nav
+  $("#navigation-list .nav-link").removeClass("active");
+
+  // Loop through each nav link and add the active class if its href matches the current URL
+  $("#navigation-list .nav-link").each(function () {
+    if ($(this).attr("href") === currentUrl) {
+      $(this).addClass("active");
+    }
+  });
+});
 /* JS function to trigger to toggle an event, in this case a button if we wanted to*/
 function toggleDarkMode() {
   document.body.classList.toggle("dark-mode");
