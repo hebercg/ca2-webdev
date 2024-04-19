@@ -16,7 +16,8 @@ header h3 {
 /*Designing for Mobile-first; dark theme first*/
 
 main {
-  background: linear-gradient(to top right,
+  background: linear-gradient(
+      to top right,
       rgba(61, 24, 10, 0.5),
       rgba(#3f0e03)
     ),
@@ -98,6 +99,7 @@ main h2 {
   font-weight: 400;
   font-style: normal;
   color: #5d5652;
+  transition: background-color 1s;
 }
 
 .navbar .nav-link.active {

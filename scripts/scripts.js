@@ -1,20 +1,19 @@
-
-/*
 $(document).ready(function () {
-  // Get the current page
-  var currentUrl = window.location.href;
-
-  // Remove the current/active class from the nav
-  $("#navigation-list .nav-link").removeClass("active");
-
-  // Loop through each nav link and add the active class if its href matches the current URL
-  $("#navigation-list .nav-link").each(function () {
-    if ($(this).attr("href") === currentUrl) {
-      $(this).addClass("active");
-    }
-  });
+  loadElements();
+  $("#main-navigation").load("navigation.html");
+  setTimeout(() => {
+    // Get the current page
+    var currentUrl = window.location.pathname;
+    // Remove the current/active class from the nav
+    $("#navigation-list .nav-link").removeClass("active");
+    // Loop through each nav link and add the active class if its href matches the current URL
+    $("#navigation-list .nav-link").each(function () {
+      if ($(this).attr("href") === currentUrl) {
+        $(this).addClass("active");
+      }
+    });
+  }, "50");
 });
-*/
 /* JS function to trigger to toggle an event, in this case a button if we wanted to*/
 function toggleDarkMode() {
   document.body.classList.toggle("dark-mode");
@@ -45,14 +44,9 @@ function loadElements() {
   var headerString = "<h1>Life begins with coffee</h1>";
   document.getElementById("page-header").innerHTML = headerString;
 
-  $(document).ready(function () {
-    $("#main-navigation").load("navigation.html");
-  });
-
-  if(document.getElementById("product-table") != null){
+  if (document.getElementById("product-table") != null) {
     hideTable();
-  }
-  else{
+  } else {
     //pass
   }
 }
@@ -67,11 +61,12 @@ function formValidate() {
       document.getElementById("first-name").value.match(lettersAndDash) &&
       document.getElementById("last-name").value.match(lettersAndDash)
     ) {
-      if(document.getElementById("eircode").value.match(/^[0-9A-Za-z]{7}/)){
+      if (document.getElementById("eircode").value.match(/^[0-9A-Za-z]{7}/)) {
         //next
-      }
-      else{
-        alert("Incorrect eircode format. Please enter full 7-digit eircode without spaces")
+      } else {
+        alert(
+          "Incorrect eircode format. Please enter full 7-digit eircode without spaces"
+        );
       }
     } else {
       alert(
@@ -101,21 +96,18 @@ function hideTable() {
 function showTable() {
   var buttonText = document.getElementById("show-products-button").innerHTML;
 
-  var showMessage = "Just show me the products"
+  var showMessage = "Just show me the products";
   var hideMessage = "Hide";
-  
 
-  if(buttonText===hideMessage){
+  if (buttonText === hideMessage) {
     hideTable();
-    document.getElementById("show-products-button").innerHTML=showMessage;
+    document.getElementById("show-products-button").innerHTML = showMessage;
     buttonText = showMessage;
-  }
-  else{
+  } else {
     document.getElementById("product-table").style.display = "block";
-    document.getElementById("show-products-button").innerHTML=hideMessage;
+    document.getElementById("show-products-button").innerHTML = hideMessage;
     buttonText = hideMessage;
   }
-
 }
 
 function takeFlight() {
