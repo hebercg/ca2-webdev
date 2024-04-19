@@ -46,49 +46,16 @@
     ></nav>
     <main>
       <p>Hello, <span id="username"></span>! Browse our amazing products.</p>
-      <button id="show-products-button" onclick="showTable()">
+      <button id="show-products-button" onclick="showProducts()">
         Just show me the products
       </button>
       <button onclick="takeFlight()">Go on a journey</button>
       <div id="product-div" class="content-div">
-        <table id="product-table">
-          <thead id="product-table-head">
-            <tr>
-              <th>Name</th>
-              <th>Type</th>
-              <th>Origin</th>
-              <th>Price</th>
-              <th>Image</th>
-              <th>Properties</th>
-              <th>Description</th>
-            </tr>
-          </thead>
-          <tbody></tbody>
-        </table>
+        <div id="card-group" class="card-group"></div>
       </div>
     </main>
     <footer></footer>
 
-    <script>
-      $(document).ready(function () {
-        $.getJSON("products.json", function (data) {
-          var tableBody = $("#product-table tbody");
-
-          $.each(data, function (index, value) {
-            var row = $("<tr></tr>");
-
-            row.append($("<td></td>").append(value.productName));
-            row.append($("<td></td>").append(value.beanType));
-            row.append($("<td></td>").append(value.origin));
-            row.append($("<td></td>").append(value.price));
-            row.append($("<td></td>").append(value.imageLink));
-            row.append($("<td></td>").append(value.properties));
-            row.append($("<td></td>").append(value.description));
-
-            tableBody.append(row);
-          });
-        });
-      });
-    </script>
+    
   </body>
 </html>

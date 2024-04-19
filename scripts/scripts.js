@@ -67,11 +67,37 @@ function loadElements() {
   var headerString = "<h1>Life begins with coffee</h1>";
   document.getElementById("page-header").innerHTML = headerString;
 
-  if (document.getElementById("product-table") != null) {
-    hideTable();
-  } else {
+  if (document.getElementById("product-div") != null) {
+    hideProducts();
+    
+  }
+    
+  else {
     //pass
   }
+
+}
+
+function addCardContent(){
+  var cardsContent = `<div class="card">
+    <img src="" class="card-img-top" alt="...">
+    <div class="card-body">
+    <h5 class="card-title"></h5>
+    <h6 class="card-subtitle mb-2 text-muted"></h6>
+    <p class="card-text"></p>
+</div>`;
+  if(document.getElementById("card-group").innerHTML==""){
+    for(i=0;i<imageLinkArray.length;i++){
+      document.getElementById("card-group").innerHTML+=cardsContent;
+      var image = document.getElementsByTagName("img")[i];
+      image.src=imageLinkArray[i];
+      image.alt=imageLinkArray[i];
+      document.getElementsByClassName("card-title")[i].innerHTML=productNameArray[i];
+      document.getElementsByClassName("card-subtitle mb-2 text-muted")[i].innerHTML=originArray[i];
+      document.getElementsByClassName("card-text")[i].innerHTML=descriptionArray[i];
+    }
+  }
+  
 }
 
 function formValidate() {
@@ -112,25 +138,27 @@ function letsGo() {
     beanTypeArray[beanSelection];
 }
 
-function hideTable() {
-  document.getElementById("product-table").style.display = "none";
+function hideProducts() {
+  document.getElementById("product-div").style.display = "none";
 }
 
-function showTable() {
+function showProducts() {
   var buttonText = document.getElementById("show-products-button").innerHTML;
 
   var showMessage = "Just show me the products";
   var hideMessage = "Hide";
 
   if (buttonText === hideMessage) {
-    hideTable();
+    hideProducts();
     document.getElementById("show-products-button").innerHTML = showMessage;
     buttonText = showMessage;
   } else {
-    document.getElementById("product-table").style.display = "block";
+    document.getElementById("product-div").style.display = "block";
     document.getElementById("show-products-button").innerHTML = hideMessage;
     buttonText = hideMessage;
   }
+
+  addCardContent();
 }
 
 function takeFlight() {
