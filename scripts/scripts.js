@@ -1,3 +1,4 @@
+//Heber almost had a hearth attach to make this work
 $(document).ready(function () {
   loadElements();
   $("#main-navigation").load("navigation.html");
