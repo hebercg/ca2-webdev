@@ -25,7 +25,7 @@ function loadElements() {
     //pass
   }
 
-  var headerString = "<h1>Test Mode Because we like that</h1>";
+  var headerString = "<h1>Life begins with coffee</h1>";
   document.getElementById("page-header").innerHTML = headerString;
 
   $(document).ready(function () {
@@ -44,9 +44,7 @@ function formValidate() {
     ) {
       //next
     } else {
-      alert(
-        "Unless your father's name is Elon, you need to give us your real name."
-      );
+      alert("Unless you prefer to be annonymous, give us your real name.");
     }
   } else {
     //HTML form errors first
