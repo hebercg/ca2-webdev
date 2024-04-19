@@ -58,7 +58,9 @@ function formValidate() {
     ) {
       //next
     } else {
-      alert("Please provide your first and last name. If you do happen to have numbers in your name, contact us.");
+      alert(
+        "Please provide your first and last name. If you do happen to have numbers in your name, contact us."
+      );
     }
   } else {
     //HTML form errors first
