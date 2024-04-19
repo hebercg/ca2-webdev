@@ -1,3 +1,5 @@
+
+/*
 $(document).ready(function () {
   // Get the current page
   var currentUrl = window.location.href;
@@ -12,6 +14,7 @@ $(document).ready(function () {
     }
   });
 });
+*/
 /* JS function to trigger to toggle an event, in this case a button if we wanted to*/
 function toggleDarkMode() {
   document.body.classList.toggle("dark-mode");
@@ -45,6 +48,13 @@ function loadElements() {
   $(document).ready(function () {
     $("#main-navigation").load("navigation.html");
   });
+
+  if(document.getElementById("product-table") != null){
+    hideTable();
+  }
+  else{
+    //pass
+  }
 }
 
 function formValidate() {
@@ -89,7 +99,23 @@ function hideTable() {
 }
 
 function showTable() {
-  document.getElementById("product-table").style.display = "block";
+  var buttonText = document.getElementById("show-products-button").innerHTML;
+
+  var showMessage = "Just show me the products"
+  var hideMessage = "Hide";
+  
+
+  if(buttonText===hideMessage){
+    hideTable();
+    document.getElementById("show-products-button").innerHTML=showMessage;
+    buttonText = showMessage;
+  }
+  else{
+    document.getElementById("product-table").style.display = "block";
+    document.getElementById("show-products-button").innerHTML=hideMessage;
+    buttonText = hideMessage;
+  }
+
 }
 
 function takeFlight() {
