@@ -67,6 +67,52 @@ main {
     color: #3f0e03; /* Dark brown text */
   }
 }
+
+/* fonts
+// <uniquifier>: Use a unique and descriptive class name
+// <weight>: Use a value from 200 to 900 */
+.description-text {
+  font-family: "Crimson Pro", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+/* <uniquifier>: Use a unique and descriptive class name
+// <weight>: Use a value from 300 to 700 */
+.maintext {
+  font-family: "Quicksand", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+.title {
+  font-family: "Pacifico", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+.shadow{ /*for text*/
+  text-shadow: 
+  -1px  1px 0 black,
+   1px  1px 0 black;
+}
+/* background photo style */
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.6; 
+}
+.text {
+  color: #eec78e;
+  font-size: 24px;
+  padding: 20px;
+  z-index: 1;
+}
 /* navbar styling stuff - background and links - lets change the colours to */
 .navbar {
   background-color: #885436;
@@ -95,7 +141,11 @@ footer {
   color: #fff;
   padding: 20px;
   display: flex;
-  
+  position: fixed; /* Fixed positioning for visibility across the entire page */
+  bottom: 0; /* Positioned at the bottom of the page */
+  left: 0; /* Positioned to the left */
+  width: 100%; /* Full width of the screen */
+  z-index: 999; /* Ensure the footer is positioned above other elements */
 }
 
 .footer-column {
@@ -128,3 +178,47 @@ footer {
 .footer-column.social.social-media-link img {
   cursor: pointer; 
 }
+
+/* */
+
+.image-container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.image {
+  width: 100%;
+  height: 100vh; 
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.text-overlay {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+  color: white;
+  width: 50%; 
+  padding: 0 20px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.text-overlay.left {
+  left: 0; /* Для текста на левой стороне */
+  text-align: left;
+}
+
+.text-overlay.right {
+  right: 0; /* Для текста на правой стороне */
+  text-align: right;
+
+
+}
+
+.text-overlay p {
+  font-size: 24px;
+}
+
