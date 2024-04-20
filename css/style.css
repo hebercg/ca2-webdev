@@ -65,11 +65,12 @@ main h2 {
   font-style: normal;
 }
 
-/*content div*/
+/*content div to make the text more readable*/
 .content-div {
   background-color: #211008;
   opacity: 70%;
   text-align: center;
+  padding: 3%;
 }
 
 
