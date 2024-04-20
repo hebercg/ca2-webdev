@@ -91,10 +91,6 @@ function loadElements() {
   } else {
     //pass
   }
-
-  var headerString = "<h1>Life begins with coffee</h1>";
-  document.getElementById("page-header").innerHTML = headerString;
-
   if (document.getElementById("product-div") != null) {
     hideProducts();
   } else {
