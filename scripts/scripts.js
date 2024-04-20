@@ -251,3 +251,16 @@ document.addEventListener('DOMContentLoaded', function() {
       alert("Thank you! We will contact you as soon as possible.");
   });
 });
+
+// Function to change the image when clicked
+function changeImage() {
+  // Get the image element by its ID
+  var image = document.getElementById("homepageImg");
+  
+  /*if there is coffeeframe1.jpg on the screen, when pressed it will change to picture 2*/
+  if (image.src.endsWith("images/coffeeframe1.jpg")) {
+      image.src = "images/coffeeespresso1.jpg";
+  } else {
+      image.src = "images/filtercoffee1.jpg";
+  }
+}
