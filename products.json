@@ -49,8 +49,8 @@
   { 
     "productID": 5,
     "productName": "Yellow Bourbon Unroasted",
-    "beanType": "Raw",
-    "origin": "Mix of Arabica beans from the north of Mexico",
+    "beanType": "Arabica mix",
+    "origin": "Mexico",
     "price": 6.66,
     "imageLink": "/images/coffeebeans7.jpg",
     "properties": ["full bodied"],

@@ -9,12 +9,26 @@ var propertiesArray = [];
 var descriptionArray = [];
 var hintsArray=[];
 
-var cardsContent = `<div class="card">
-    <img src="" class="card-img-top" alt="...">
+var cardsContent = 
+`<div class="card">
+    <img src="" class="card-img-top" alt="">
     <div class="card-body">
     <h5 class="card-title"></h5>
     <h6 class="card-subtitle mb-2 text-muted"></h6>
     <p class="card-text"></p>
+</div>`;
+
+var quizCardContent = 
+`<div class="card text-center" style="width: 18rem;">
+  <img src="" class="card-img-top" alt="">
+  <div class="card-body">
+    <h5 class="card-title"></h5>
+    <p class="card-text"></p>
+    <p class="card-text"></p>
+    <p class="card-text"></p>
+    <input type="text" id="user-guess"/>
+    <a href="#" id="check-answer" class="btn btn-primary">Guess</a>
+  </div>
 </div>`;
 
 $(document).ready(function () {
@@ -155,46 +169,36 @@ function showProducts() {
 function takeFlight() {
   if(document.getElementById("card-group").innerHTML=="" && document.getElementById("journey-div").innerHTML==""){
     document.getElementById("product-div").style.display = "block";
-    document.getElementById("journey-div").innerHTML="Hello";
+    fillQuizCard();
   }
   else{
     document.getElementById("card-group").innerHTML="";
     document.getElementById("journey-div").innerHTML="";
     document.getElementById("product-div").style.display = "block";
-    var imgTag = document.createElement("img");
-    document.getElementById("journey-div").appendChild(imgTag);
-    for(i=0;i<3;i++){
-      var textTag = document.createElement("p");
-      document.getElementById("journey-div").appendChild(textTag);
-    }
-    var inputTag = document.createElement("input");
-    document.getElementById("journey-div").appendChild(inputTag);
-    var span = document.createElement("span");
-    document.getElementById("journey-div").appendChild(span);
-    span.innerHTML='<button id=quizButton onClick="quiz()>Submit</button>"'
-    
-    var image = document.getElementsByTagName("img")[0];
+    fillQuizCard;
+  }
+}
+
+function fillQuizCard(){
+  document.getElementById("journey-div").innerHTML=quizCardContent;
+    document.getElementsByClassName("card-title")[0].innerHTML="Guess the country";
+    var image = document.getElementsByClassName("card-img-top")[0];
     var randomSelection = Math.floor(Math.random() * (imageLinkArray.length)+ 1);
     console.log(randomSelection)
 
     image.src=imageLinkArray[randomSelection-1];
-    for(i=0;i<hintsArray[randomSelection-1].length;i++){
-      document.getElementsByTagName("p")[i].innerHTML=hintsArray[randomSelection-1][i];
+    for(i=0;i<hintsArray[randomSelection].length;i++){
+      document.getElementsByClassName("card-text")[i].innerHTML=hintsArray[randomSelection-1][i];
     }
 
-    if(document.getElementsByTagName("input")){
-      quiz();
-    }
-
-    function quiz(){
-      if(document.getElementsByTagName("input")[0].value==originArray[randomSelection]){
-        document.write("You guessed it!")
+    document.getElementById("check-answer").addEventListener("click",function(){
+      if(document.getElementById("user-guess").value==originArray[randomSelection]){
+        alert("You guessed it!")
       }
       else{
-        document.write("Bad luck. It was "+originArray[randomSelection])
+        alert("Bad luck. It was "+originArray[randomSelection])
       }
-    }
-  }
+    });
 }
 
 function addCardContent(){
@@ -202,7 +206,7 @@ function addCardContent(){
     document.getElementById("product-div").style.display = "block";
     for(i=0;i<imageLinkArray.length;i++){
       document.getElementById("card-group").innerHTML+=cardsContent;
-      var image = document.getElementsByTagName("img")[i];
+      var image = document.getElementsByClassName("card-img-top")[i];
       image.src=imageLinkArray[i];
       image.alt=imageLinkArray[i];
       document.getElementsByClassName("card-title")[i].innerHTML=productNameArray[i];
