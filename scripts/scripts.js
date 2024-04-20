@@ -195,9 +195,23 @@ function fillQuizCard(){
     document.getElementById("check-answer").addEventListener("click",function(){
       if(document.getElementById("user-guess").value==originArray[(randomSelection-1)]){
         alert("You guessed it!")
+        var again = confirm("Play again?");
+        if(again){
+          fillQuizCard();
+        }
+        else{
+          alert("Thanks for playing!")
+        }
       }
       else{
         alert("Bad luck. It was "+originArray[randomSelection-1])
+        var again = confirm("Play again?");
+        if(again){
+          fillQuizCard();
+        }
+        else{
+          alert("Thanks for playing!")
+        }
       }
     });
 }
