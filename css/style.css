@@ -277,6 +277,7 @@ ul {
 /* Styles for the image block */
 .home-page .image-block {
   margin-top: 20px; /* Top margin for separating text and image */
+  cursor: pointer;
 }
 
 /* Styles for the image */
