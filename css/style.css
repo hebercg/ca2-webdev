@@ -150,9 +150,9 @@ footer {
   padding: 5px;
   display: flex;
   margin-top: auto;
-  position: sticky; /* Fixed positioning for visibility across the entire page */
-  bottom: 0; /* Positioned at the bottom of the page */
-  left: 0; /* Positioned to the left */
+  position: fixed; /* Fixed positioning for visibility across the entire page */
+  bottom: 0; 
+  left: 0; 
   width: 100%; /* Full width of the screen */
   z-index: 999; /* Ensure the footer is positioned above other elements */
 }
@@ -240,3 +240,7 @@ ul {
 .text-overlay p {
   font-size: 24px;
 }
+
+/*contact page*/
+
+
