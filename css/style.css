@@ -22,6 +22,9 @@
   font-weight: 700;
   font-style: normal;
 }
+.shadow{
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
 .logo {
   float: left;
 }
@@ -255,3 +258,37 @@ ul {
 }
 
 /*contact page*/
+/*home*/
+.home-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centering content horizontally */
+  justify-content: center; /* Centering content vertically */
+  margin: 0;
+  padding: 0;
+  height: 100vh; /* Taking up the entire viewport height */
+  text-align: center; /* Centering content horizontally */
+}
+
+/* Styles for the text block */
+.home-page .text-block {
+  text-align: center; /* Centering text horizontally */
+  padding: 2vw;
+  font-size: 2vw; /*resize font */
+  color: #e6d9d3;
+  width: 70%;
+}
+.text-resize {
+  font-size: 1vw; /*resize font */
+}
+/* Styles for the image block */
+.home-page .image-block {
+  margin-top: 20px; /* Top margin for separating text and image */
+}
+
+/* Styles for the image */
+.home-page .image-block img {
+  border-radius: 50%; /* Round corners to create a circular shape */
+  max-width: 40%; /* Maximum width of the image */
+  height: auto; /* Automatic height */
+}
