@@ -153,7 +153,7 @@ function showProducts() {
   var showMessage = "Just show me the products";
   var hideMessage = "Hide";
 
-  if (buttonText === hideMessage) {
+  if (buttonText == hideMessage) {
     hideProducts();
     document.getElementById("show-products-button").innerHTML = showMessage;
     buttonText = showMessage;
@@ -162,7 +162,6 @@ function showProducts() {
     document.getElementById("show-products-button").innerHTML = hideMessage;
     buttonText = hideMessage;
   }
-
   addCardContent();
 }
 
@@ -175,7 +174,7 @@ function takeFlight() {
     document.getElementById("card-group").innerHTML="";
     document.getElementById("journey-div").innerHTML="";
     document.getElementById("product-div").style.display = "block";
-    fillQuizCard;
+    fillQuizCard();
   }
 }
 
@@ -218,7 +217,6 @@ function fillQuizCard(){
 
 function addCardContent(){
   if(document.getElementById("card-group").innerHTML==""&&document.getElementById("journey-div").innerHTML==""){
-    document.getElementById("product-div").style.display = "block";
     for(i=0;i<imageLinkArray.length;i++){
       document.getElementById("card-group").innerHTML+=cardsContent;
       var image = document.getElementsByClassName("card-img-top")[i];
@@ -232,6 +230,14 @@ function addCardContent(){
   else{
     document.getElementById("card-group").innerHTML="";
     document.getElementById("journey-div").innerHTML="";
-    document.getElementById("product-div").style.display = "block";
+    for(i=0;i<imageLinkArray.length;i++){
+      document.getElementById("card-group").innerHTML+=cardsContent;
+      var image = document.getElementsByClassName("card-img-top")[i];
+      image.src=imageLinkArray[i];
+      image.alt=imageLinkArray[i];
+      document.getElementsByClassName("card-title")[i].innerHTML=productNameArray[i];
+      document.getElementsByClassName("card-subtitle mb-2 text-muted")[i].innerHTML=originArray[i];
+      document.getElementsByClassName("card-text")[i].innerHTML=descriptionArray[i];
+    }
   } 
 }
