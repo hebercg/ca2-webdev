@@ -78,7 +78,7 @@ function loadElements() {
   }
 
   var headerString = "<h1>Life begins with coffee</h1>";
-  document.getElementById("page-header").innerHTML = headerString;
+  document.getElementById("coffeelover").innerHTML = headerString;
 
   if (document.getElementById("product-div") != null) {
     hideProducts();
@@ -90,6 +90,9 @@ function loadElements() {
   }
 
 }
+$(function() {
+  $("#page-header").load("header.html");
+});
 
 function addCardContent(){
   if(document.getElementById("card-group").innerHTML==""){
