@@ -116,7 +116,7 @@ function formValidate() {
       document.getElementById("last-name").value.match(lettersAndDash)
     ) {
       if (document.getElementById("eircode").value.match(/^[0-9A-Za-z]{7}/)) {
-        //next
+        alert("Form submitted")
       } else {
         alert(
           "Incorrect eircode format. Please enter full 7-digit eircode without spaces"
@@ -192,11 +192,11 @@ function fillQuizCard(){
     }
 
     document.getElementById("check-answer").addEventListener("click",function(){
-      if(document.getElementById("user-guess").value==originArray[randomSelection]){
+      if(document.getElementById("user-guess").value==originArray[(randomSelection-1)]){
         alert("You guessed it!")
       }
       else{
-        alert("Bad luck. It was "+originArray[randomSelection])
+        alert("Bad luck. It was "+originArray[randomSelection-1])
       }
     });
 }
