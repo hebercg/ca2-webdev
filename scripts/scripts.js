@@ -252,6 +252,21 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
+/* Form validation for feedback */
+document.addEventListener('DOMContentLoaded', function() {
+  // Find the form by its id
+  var form = document.getElementById('feedbackForm');
+
+  // Add an event listener for the form submission
+  form.addEventListener('submit', function(event) {
+      // Prevent the default form submission
+      event.preventDefault();
+
+      // Display a message for successful form submission
+      alert("Thank you for your review!");
+  });
+});
+
 // Function to change the image when clicked
 function changeImage() {
   // Get the image element by its ID
