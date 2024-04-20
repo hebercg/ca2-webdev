@@ -5,10 +5,14 @@
     "beanType": "Arabica",
     "origin": "Brazil",
     "price": 8.99,
-    "imageLink": "/images/coffeebeans1.jpg",
+    "imageLink": "images/coffeebeans1.jpg",
     "properties": ["rich", "nutty", "aromatic"],
     "description": "The Yellow Bourbon is a beautiful Single Estate coffee from the Fazendas Carpinteiros from Brazil. The coffee bushes of Yellow Bourbon coffee beans grow in harmony with nature and can be found near mountains, forests and waterfalls. Brazil's wooded land offers plenty of room for rich biodiversity in plants, land animals, birds and insects. It is a mildly sweet and full coffee with a delicious bite. Taste this accessible Brazilian coffee and discover light notes of cocoa, hazelnut and walnut with a hint of tobacco in the aftertaste.",
-    "hints":["The most biodiverse country in the world","According to Frank Sinatra, they have a lot of coffee","This country is the world's second largest coffee consumer"]
+    "hints": [
+      "The most biodiverse country in the world",
+      "According to Frank Sinatra, they have a lot of coffee",
+      "This country is the world's second largest coffee consumer"
+    ]
   },
 
   {
@@ -17,10 +21,14 @@
     "beanType": "Robusta",
     "origin": "Colombia",
     "price": 6.66,
-    "imageLink": "/images/coffeebeans2.jpg",
+    "imageLink": "images/coffeebeans2.jpg",
     "properties": ["Full & Powerful"],
     "description": "Do you like coffee Real coffee From the hills of Colombia",
-    "hints":["This country has their own coffee mascot","The only country in South America that has both a Pacific and Caribbean coastline","This country is the world's second largest flower exporter"]
+    "hints": [
+      "This country has their own coffee mascot",
+      "The only country in South America that has both a Pacific and Caribbean coastline",
+      "This country is the world's second largest flower exporter"
+    ]
   },
 
   {
@@ -29,11 +37,14 @@
     "beanType": "Dark roast",
     "origin": "Cuba",
     "price": 6.66,
-    "imageLink": "/images/coffeebeans3.jpg",
+    "imageLink": "images/coffeebeans3.jpg",
     "properties": ["sweet coffee", "maple syrup", "molasses"],
     "description": "The Red Honey is produced using the honey method. The sweet fruit flavor pulls deep into the bean. Then the hard coffee beans are roasted on a grid profile with a very long development time. This results in an extra sweet coffee.",
-    "hints":["Invented a drink with a base of brown sugar whipped with the first drops of espresso","This country is home to the world's smallest bird","This country is the largest island in the Caribbean"]
-
+    "hints": [
+      "Invented a drink with a base of brown sugar whipped with the first drops of espresso",
+      "This country is home to the world's smallest bird",
+      "This country is the largest island in the Caribbean"
+    ]
   },
   {
     "productID": 4,
@@ -41,20 +52,28 @@
     "beanType": "Medium roast",
     "origin": "Ethiopia",
     "price": 6.66,
-    "imageLink": "/images/coffeebeans4.jpg",
+    "imageLink": "images/coffeebeans4.jpg",
     "properties": ["full bodied"],
     "description": "The Arabella is a 100% arabica coffee with coffee beans from the home country of the coffee, Ethiopia. You can make the Arabella as an espresso, but it is also tasty as quick-filter coffee.",
-    "hints":["The largest producer of African coffee","Widely known as the birthplace of coffee","The oldest country in Africa"]
+    "hints": [
+      "The largest producer of African coffee",
+      "Widely known as the birthplace of coffee",
+      "The oldest country in Africa"
+    ]
   },
-  { 
+  {
     "productID": 5,
     "productName": "Yellow Bourbon Unroasted",
     "beanType": "Arabica mix",
     "origin": "Mexico",
     "price": 6.66,
-    "imageLink": "/images/coffeebeans7.jpg",
+    "imageLink": "images/coffeebeans7.jpg",
     "properties": ["full bodied"],
     "description": "The Yellow Bourbon Unroasted is a 100% arabica coffee with coffee beans from Mexico. You can roast at your own taste, be it light, medium or dark roast.",
-    "hints":["Home to the world's smallest volcano","This country has the largest number of native Spanish speakers in the world","This country is home to a traditional spiced coffee drink prepared in a clay pot"]
+    "hints": [
+      "Home to the world's smallest volcano",
+      "This country has the largest number of native Spanish speakers in the world",
+      "This country is home to a traditional spiced coffee drink prepared in a clay pot"
+    ]
   }
 ]
