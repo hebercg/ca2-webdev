@@ -61,6 +61,7 @@ main h2 {
 .content-div {
   background-color: #211008;
   opacity: 70%;
+  text-align: center;
 }
 
 /*dark mode stuff*/
@@ -148,7 +149,7 @@ main h2 {
 footer {
   background-color: hsl(26, 46%, 61%);
   color: #fff;
-  padding: 5px;
+  padding: 2px;
   display: flex;
   margin-top: auto;
   position: fixed; /* Fixed positioning for visibility across the entire page */
@@ -156,6 +157,10 @@ footer {
   left: 0;
   width: 100%; /* Full width of the screen */
   z-index: 999; /* Ensure the footer is positioned above other elements */
+  height: 5%;
+}
+footer:hover{
+  height: auto;
 }
 .footer {
   margin-top: auto;
