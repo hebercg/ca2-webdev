@@ -7,6 +7,7 @@ var priceArray=[];
 var imageLinkArray=[];
 var propertiesArray=[];
 var descriptionArray=[];
+var hintsArray=[];
 
 var cardsContent = `<div class="card">
     <img src="" class="card-img-top" alt="...">
@@ -28,6 +29,7 @@ $(document).ready(function () {
       imageLinkArray.push(value.imageLink);
       propertiesArray.push(value.properties);
       descriptionArray.push(value.description);
+      hintsArray.push(value.hints)
     })
   })
   $("#main-navigation").load("navigation.html");
@@ -82,35 +84,16 @@ function loadElements() {
 
   if (document.getElementById("product-div") != null) {
     hideProducts();
-    
   }
-    
   else {
     //pass
   }
-
 }
 $(function() {
   $("#page-header").load("header.html");
 });
 
-function addCardContent(){
-  if(document.getElementById("card-group").innerHTML==""){
-    for(i=0;i<imageLinkArray.length;i++){
-      document.getElementById("card-group").innerHTML+=cardsContent;
-      var image = document.getElementsByTagName("img")[i];
-      image.src=imageLinkArray[i];
-      image.alt=imageLinkArray[i];
-      document.getElementsByClassName("card-title")[i].innerHTML=productNameArray[i];
-      document.getElementsByClassName("card-subtitle mb-2 text-muted")[i].innerHTML=originArray[i];
-      document.getElementsByClassName("card-text")[i].innerHTML=descriptionArray[i];
-    }
-  }
-  else{
-    document.getElementById("card-group").innerHTML==""
-  }
-  
-}
+
 
 function formValidate() {
   var lettersAndDash = /^[A-Za-z-]+$/;
@@ -174,5 +157,67 @@ function showProducts() {
 }
 
 function takeFlight() {
-  document.getElementById("card-group").innerHTML = cardsContent;
+  if(document.getElementById("card-group").innerHTML=="" && document.getElementById("journey-div").innerHTML==""){
+    document.getElementById("product-div").style.display = "block";
+    document.getElementById("journey-div").innerHTML="Hello";
+  }
+  else{
+    document.getElementById("card-group").innerHTML="";
+    document.getElementById("journey-div").innerHTML="";
+    document.getElementById("product-div").style.display = "block";
+    var imgTag = document.createElement("img");
+    document.getElementById("journey-div").appendChild(imgTag);
+    for(i=0;i<3;i++){
+      var textTag = document.createElement("p");
+      document.getElementById("journey-div").appendChild(textTag);
+    }
+    var inputTag = document.createElement("input");
+    document.getElementById("journey-div").appendChild(inputTag);
+    var span = document.createElement("span");
+    document.getElementById("journey-div").appendChild(span);
+    span.innerHTML='<button id=quizButton onClick="quiz()>Submit</button>"'
+    
+    var image = document.getElementsByTagName("img")[0];
+    var randomSelection = Math.floor(Math.random() * (imageLinkArray.length)+ 1);
+    console.log(randomSelection)
+
+    image.src=imageLinkArray[randomSelection-1];
+    for(i=0;i<hintsArray[randomSelection-1].length;i++){
+      document.getElementsByTagName("p")[i].innerHTML=hintsArray[randomSelection-1][i];
+    }
+
+    if(document.getElementsByTagName("input")){
+      quiz();
+    }
+
+    function quiz(){
+      if(document.getElementsByTagName("input")[0].value==originArray[randomSelection]){
+        document.write("You guessed it!")
+      }
+      else{
+        document.write("Bad luck. It was "+originArray[randomSelection])
+      }
+    }
+  }
+  
+}
+
+function addCardContent(){
+  if(document.getElementById("card-group").innerHTML==""&&document.getElementById("journey-div").innerHTML==""){
+    document.getElementById("product-div").style.display = "block";
+    for(i=0;i<imageLinkArray.length;i++){
+      document.getElementById("card-group").innerHTML+=cardsContent;
+      var image = document.getElementsByTagName("img")[i];
+      image.src=imageLinkArray[i];
+      image.alt=imageLinkArray[i];
+      document.getElementsByClassName("card-title")[i].innerHTML=productNameArray[i];
+      document.getElementsByClassName("card-subtitle mb-2 text-muted")[i].innerHTML=originArray[i];
+      document.getElementsByClassName("card-text")[i].innerHTML=descriptionArray[i];
+    }
+  }
+  else{
+    document.getElementById("card-group").innerHTML="";
+    document.getElementById("journey-div").innerHTML="";
+    document.getElementById("product-div").style.display = "block";
+  } 
 }
