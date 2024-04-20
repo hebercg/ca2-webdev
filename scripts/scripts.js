@@ -180,6 +180,7 @@ function takeFlight() {
 }
 
 function fillQuizCard(){
+  
   document.getElementById("journey-div").innerHTML=quizCardContent;
     document.getElementsByClassName("card-title")[0].innerHTML="Guess the country";
     var image = document.getElementsByClassName("card-img-top")[0];
@@ -187,7 +188,7 @@ function fillQuizCard(){
     console.log(randomSelection)
 
     image.src=imageLinkArray[randomSelection-1];
-    for(i=0;i<hintsArray[randomSelection].length;i++){
+    for(i=0;i<hintsArray[randomSelection-1].length;i++){
       document.getElementsByClassName("card-text")[i].innerHTML=hintsArray[randomSelection-1][i];
     }
 
