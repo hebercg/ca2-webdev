@@ -237,3 +237,17 @@ function addCardContent(){
     }
   } 
 }
+/* Form validation for contact page */
+document.addEventListener('DOMContentLoaded', function() {
+  // Find the form by its id
+  var form = document.getElementById('contact-form');
+
+  // Add an event listener for the form submission
+  form.addEventListener('submit', function(event) {
+      // Prevent the default form submission
+      event.preventDefault();
+
+      // Display a message for successful form submission
+      alert("Thank you! We will contact you as soon as possible.");
+  });
+});
