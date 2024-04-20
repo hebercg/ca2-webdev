@@ -1,12 +1,12 @@
 //Heber almost had a hearth attach to make this work
-var productIDArray=[];
-var productNameArray=[];
-var beanTypeArray=[];
-var originArray=[];
-var priceArray=[];
-var imageLinkArray=[];
-var propertiesArray=[];
-var descriptionArray=[];
+var productIDArray = [];
+var productNameArray = [];
+var beanTypeArray = [];
+var originArray = [];
+var priceArray = [];
+var imageLinkArray = [];
+var propertiesArray = [];
+var descriptionArray = [];
 
 var cardsContent = `<div class="card">
     <img src="" class="card-img-top" alt="...">
@@ -17,9 +17,8 @@ var cardsContent = `<div class="card">
 </div>`;
 
 $(document).ready(function () {
-  
-  $.getJSON("products.json", function(data){
-    $.each(data, function(index,value){
+  $.getJSON("products.json", function (data) {
+    $.each(data, function (index, value) {
       productIDArray.push(value.productID);
       productNameArray.push(value.productName);
       beanTypeArray.push(value.beanType);
@@ -28,8 +27,8 @@ $(document).ready(function () {
       imageLinkArray.push(value.imageLink);
       propertiesArray.push(value.properties);
       descriptionArray.push(value.description);
-    })
-  })
+    });
+  });
   $("#main-navigation").load("navigation.html");
   setTimeout(() => {
     // Get the current page
@@ -47,7 +46,7 @@ $(document).ready(function () {
 });
 
 /*footer*/
-$(function() {
+$(function () {
   $("#block-footer").load("footer.html");
 });
 /* JS function to trigger to toggle an event, in this case a button if we wanted to*/
@@ -82,34 +81,32 @@ function loadElements() {
 
   if (document.getElementById("product-div") != null) {
     hideProducts();
-    
-  }
-    
-  else {
+  } else {
     //pass
   }
-
 }
-$(function() {
+$(function () {
   $("#page-header").load("header.html");
 });
 
-function addCardContent(){
-  if(document.getElementById("card-group").innerHTML==""){
-    for(i=0;i<imageLinkArray.length;i++){
-      document.getElementById("card-group").innerHTML+=cardsContent;
+function addCardContent() {
+  if (document.getElementById("card-group").innerHTML == "") {
+    for (i = 0; i < imageLinkArray.length; i++) {
+      document.getElementById("card-group").innerHTML += cardsContent;
       var image = document.getElementsByTagName("img")[i];
-      image.src=imageLinkArray[i];
-      image.alt=imageLinkArray[i];
-      document.getElementsByClassName("card-title")[i].innerHTML=productNameArray[i];
-      document.getElementsByClassName("card-subtitle mb-2 text-muted")[i].innerHTML=originArray[i];
-      document.getElementsByClassName("card-text")[i].innerHTML=descriptionArray[i];
+      image.src = imageLinkArray[i];
+      image.alt = imageLinkArray[i];
+      document.getElementsByClassName("card-title")[i].innerHTML =
+        productNameArray[i];
+      document.getElementsByClassName("card-subtitle mb-2 text-muted")[
+        i
+      ].innerHTML = originArray[i];
+      document.getElementsByClassName("card-text")[i].innerHTML =
+        descriptionArray[i];
     }
+  } else {
+    document.getElementById("card-group").innerHTML == "";
   }
-  else{
-    document.getElementById("card-group").innerHTML==""
-  }
-  
 }
 
 function formValidate() {
