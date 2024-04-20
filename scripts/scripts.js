@@ -173,10 +173,10 @@ function takeFlight() {
     }
     var inputTag = document.createElement("input");
     document.getElementById("journey-div").appendChild(inputTag);
-    var buttonTag = document.createElement("button");
-    document.getElementById("journey-div").appendChild(buttonTag);
-    var button = document.getElementsByTagName("button")[0].onclick=quiz();
-
+    var span = document.createElement("span");
+    document.getElementById("journey-div").appendChild(span);
+    span.innerHTML='<button id=quizButton onClick="quiz()>Submit</button>"'
+    
     var image = document.getElementsByTagName("img")[0];
     var randomSelection = Math.floor(Math.random() * (imageLinkArray.length)+ 1);
     console.log(randomSelection)
