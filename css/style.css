@@ -28,8 +28,13 @@
 .logo {
   float: left;
 }
+.logo h1 {
+  font-size: 35px; /* Размер шрифта в 3% ширины видимой области */
+  
+}
 .logo img {
   width: 50%;
+  float: right;
 }
 header {
   z-index: 9999;
@@ -66,13 +71,7 @@ main h2 {
   opacity: 70%;
   text-align: center;
 }
-.cont-position { /*try to make border on contact block */
-  background-color: rgba(33, 16, 8, 0.7); 
-  width: 15%;
-  box-sizing: border-box;
-  padding: 10px; 
-  border: 2px solid black; 
-}
+
 
 /*dark mode stuff*/
 @media (prefers-color-scheme: dark) {
@@ -155,11 +154,11 @@ main h2 {
 .navbar-toggler-icon {
   background-color: #e7e4d7;
 }
-
+/* footer */
 footer {
   background-color: hsl(26, 46%, 61%);
   color: #fff;
-  padding: 2px;
+  padding: 10px;
   display: flex;
   margin-top: auto;
   position: fixed; /* Fixed positioning for visibility across the entire page */
@@ -175,28 +174,23 @@ footer:hover{
 .footer {
   margin-top: auto;
 }
-
 .footer-column {
   width: 50%;
   margin-right: auto;
   margin-left: auto;
 }
-
 .footer-column h4,
 ul {
   color: #fff;
   padding: 0;
 }
-
 .footer-column ul li {
   margin-bottom: 2px;
 }
-
 .footer-column ul li a {
   color: #fff;
   text-decoration: none;
 }
-
 .footer-column ul li a:hover {
   text-decoration: underline; /* Underline links on hover */
 }
@@ -204,7 +198,6 @@ ul {
 .nci-link {
   display: inline-block;
 }
-
 .nci-link img {
   cursor: pointer;
   width: 15%;
