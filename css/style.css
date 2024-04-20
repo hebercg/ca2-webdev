@@ -113,7 +113,10 @@ main h2 {
   color: #ffffff;
   background-color: #8c3815;
 }
-
+.nav-link:hover { /*change text color on hover*/
+  background-color: #8c391546;
+  color: #ffffff; 
+}
 .navbar-toggler {
   border-color: #e7e4d7;
 }
@@ -134,12 +137,15 @@ footer {
   z-index: 999; /* Ensure the footer is positioned above other elements */
 }
 
+/* footer css */
 .footer-column {
-  width: calc(25% - 50px);
-  margin-right: 50px;
+  width: 50%;
+  margin-right: auto;
+  margin-left: auto;
 }
 
-.footer-column h4, .footer-column ul {
+.footer-column h4, 
+ul {
   color: #fff;
   padding: 0;
 }
@@ -154,15 +160,16 @@ footer {
 }
 
 .footer-column ul li a:hover {
-  text-decoration: underline;
+  text-decoration: underline; /* Underline links on hover */
 }
-
-.footer-column.soсial .social-media-link {
+/* style for nci logo */
+.nci-link {
   display: inline-block;
 }
 
-.footer-column.social.social-media-link img {
-  cursor: pointer; 
+.nci-link img { 
+  cursor: pointer;
+  width: 15%; 
 }
 
 /*about block for text on photos*/

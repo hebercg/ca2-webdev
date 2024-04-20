@@ -47,6 +47,11 @@ $(document).ready(function () {
   }, "50");
   loadElements();
 });
+
+/*footer*/
+$(function() {
+  $("#block-footer").load("footer.html");
+});
 /* JS function to trigger to toggle an event, in this case a button if we wanted to*/
 function toggleDarkMode() {
   document.body.classList.toggle("dark-mode");
@@ -75,7 +80,7 @@ function loadElements() {
   }
 
   var headerString = "<h1>Life begins with coffee</h1>";
-  document.getElementById("page-header").innerHTML = headerString;
+  document.getElementById("coffeelover").innerHTML = headerString;
 
   if (document.getElementById("product-div") != null) {
     hideProducts();
@@ -84,6 +89,9 @@ function loadElements() {
     //pass
   }
 }
+$(function() {
+  $("#page-header").load("header.html");
+});
 
 
 
